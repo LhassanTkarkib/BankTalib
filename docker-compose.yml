@@ -1,0 +1,40 @@
+version: '3.1'
+
+services:
+#  publication-db:
+#    container_name: publication-microservice-db
+#    image: postgres:16
+#    environment:
+#      POSTGRES_USER: publication_microservice
+#      POSTGRES_PASSWORD: publication_microservice
+#      PGDATA: /data/postgres
+#    volumes:
+#      - publication-db:/data/postgres
+#    ports:
+#      - "5223:5432"
+#    networks:
+#      - db
+#    restart: unless-stopped
+  user-db:
+    container_name: users-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
+      PGDATA: /data/postgres
+    volumes:
+      - user-db:/data/postgres
+    ports:
+      - "5222:5432"
+    networks:
+      - db
+    restart: unless-stopped
+
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  user-db:
+#
+#  publication-db:
