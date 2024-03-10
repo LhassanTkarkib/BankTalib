@@ -1,5 +1,0 @@
- spring:
-   pplication:
-     name: user-dev.yml
-   config:
-     import: optional:config-server:http://localhost:8071

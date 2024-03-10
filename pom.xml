@@ -11,8 +11,9 @@
   <url>http://maven.apache.org</url>
 
   <modules>
-    <module>UserMicroService</module>
-      <module>api-gateway</module>
+    <module>UsersMicroService</module>
+    <module>api-gateway</module>
+    <module>configserver</module>
   </modules>
 
   <properties>

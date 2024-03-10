@@ -1,0 +1,61 @@
+server:
+  port: 8222
+spring:
+  application:
+    name: gateway
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        - id: exempleservice
+          uri: lb://exempleservice
+          predicates:
+            - Path=/api/v1/exemple/**
+          filters:
+            - AuthenticationFilter
+        ##Groupe Service
+        - id: groupeservice
+          uri: lb://groupeservice
+          predicates:
+            - Path=/api/v1/grp/**
+          filters:
+            - AuthenticationFilter
+        ##Post Service
+        - id: postservice
+          uri: lb://postservice
+          predicates:
+            - Path=/api/v1/post/**
+          filters:
+            - AuthenticationFilter
+        ##Reaction Service
+        - id: reactionservice
+          uri: lb://reactionservice
+          predicates:
+            - Path=/api/v1/likes/**
+          filters:
+            - AuthenticationFilter
+        ##Relation Service
+        - id: relationservice
+          uri: lb://relationservice
+          predicates:
+            - Path=/api/v1/friends/**
+          filters:
+            - AuthenticationFilter
+        ##if needed
+        - id: usedservice
+          uri: lb://usedservice
+          predicates:
+            - Path=/api/v1/used/**
+          filters:
+            - AuthenticationFilter
+        ##########
+        - id: identityservice
+          uri: lb://identityservice
+          predicates:
+            - Path=/auth/**
