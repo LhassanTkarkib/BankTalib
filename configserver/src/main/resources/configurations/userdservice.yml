@@ -23,7 +23,6 @@ server:
 spring:
   application:
     name: userdservice
-
   datasource:
     url: jdbc:postgresql://localhost:5222/users-database
     username: ryukiro

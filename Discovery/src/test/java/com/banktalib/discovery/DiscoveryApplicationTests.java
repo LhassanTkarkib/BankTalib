@@ -1,10 +1,10 @@
-package org.surfsharing.configserver;
+package com.banktalib.discovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigserverApplicationTests {
+class DiscoveryApplicationTests {
 
     @Test
     void contextLoads() {

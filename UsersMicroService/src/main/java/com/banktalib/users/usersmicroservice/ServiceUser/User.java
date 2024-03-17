@@ -1,8 +1,8 @@
 package com.banktalib.users.usersmicroservice.ServiceUser;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 
 @Getter
 @Setter

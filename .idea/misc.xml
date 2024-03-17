@@ -8,12 +8,12 @@
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/configuration-server/pom.xml" />
         <option value="$PROJECT_DIR$/UsersMicroService/pom.xml" />
+        <option value="$PROJECT_DIR$/Discovery/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Congiguration-server/pom.xml" />
-        <option value="$PROJECT_DIR$/UsersMicroService/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/configuration-server/pom.xml" />
       </set>

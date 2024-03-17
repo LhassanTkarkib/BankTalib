@@ -12,8 +12,8 @@
 
   <modules>
     <module>UsersMicroService</module>
-    <module>api-gateway</module>
     <module>configserver</module>
+    <module>Discovery</module>
   </modules>
 
   <properties>
