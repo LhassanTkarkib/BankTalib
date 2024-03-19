@@ -15,26 +15,28 @@ services:
 #    networks:
 #      - db
 #    restart: unless-stopped
-  user-db:
-    container_name: users-db
-    image: postgres:16
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: user
-      PGDATA: /data/postgres
-    volumes:
-      - user-db:/data/postgres
-    ports:
-      - "5222:5432"
-    networks:
-      - db
-    restart: unless-stopped
+
+ users-db:
+  container_name: users-database
+  image: postgres:16
+  environment:
+    POSTGRES_USER: ryukiro
+    POSTGRES_PASSWORD: ryukiro
+    POSTGRES_DB: users-database
+    PGDATA: /data/postgres
+  volumes:
+    - users-db:/data/postgres
+  ports:
+    - "5222:5432"
+  networks:
+    - db
+  restart: unless-stopped
 
 networks:
   db:
     driver: bridge
 
 volumes:
-  user-db:
+  users-db:
 #
 #  publication-db:

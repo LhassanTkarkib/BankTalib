@@ -11,8 +11,10 @@
   <url>http://maven.apache.org</url>
 
   <modules>
-    <module>UserMicroService</module>
-      <module>api-gateway</module>
+    <module>UsersMicroService</module>
+    <module>configserver</module>
+    <module>Discovery</module>
+    <module>Gateway</module>
   </modules>
 
   <properties>
@@ -58,6 +60,11 @@
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.wimdeblauwe</groupId>
+      <artifactId>error-handling-spring-boot-starter</artifactId>
+        <version>4.2.0</version>
     </dependency>
   </dependencies>
 
