@@ -63,3 +63,15 @@ pUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUs
 eUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Enums/RoleUser.java,d\0\d0187c65a29305e5b0555daa13bfcdcd1058d98a
 “
 cUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Enums/Gender.java,b\a\ba064cf6875ce5fba1e252bcdb978b58eb80c833
+D
+EventService/HELP.md,c\4\c4b039f79b84323a708626e54070fbc62e463f68
+F
+PaymentService/pom.xml,8\3\83e3eb4674e29f7c9b9cd1e219c0453bd4b765e7
+D
+EventService/pom.xml,5\5\553e44f29fce5cc03a110d883e32ec5d4a3300a4
+K
+NotificationService/pom.xml,1\7\17f00a3acbda1ae02846b369d0b6a8d6af41a72d
+L
+CommunicationService/pom.xml,f\1\f19be9a69d9fd844e57ae840359307e647c2952a
+N
+ExpenseTrackingService/pom.xml,8\4\8417f117f00a0acab63416f7642e112a09823c6c
