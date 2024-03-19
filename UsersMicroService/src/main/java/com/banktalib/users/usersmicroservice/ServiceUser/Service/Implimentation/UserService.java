@@ -1,0 +1,78 @@
+package com.banktalib.users.usersmicroservice.ServiceUser.Service.Implimentation;
+
+import com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity;
+import com.banktalib.users.usersmicroservice.ServiceUser.Service.IUserService;
+import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
+import com.banktalib.users.usersmicroservice.ServiceUser.Mapper.UserMapper;
+import com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+public class UserService implements IUserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public UserDto createUser(UserDto userDto) {
+
+        UserEntity userEntity = userMapper.userDtoToUserEntity(userDto);
+        UserEntity savedUserEntity = userRepository.save(userEntity);
+        return userMapper.userEntityToUserDto(savedUserEntity);
+    }
+
+    @Override
+    public UserDto getUser(Long userId) {
+        Optional<UserEntity> userEntityOptional = userRepository.findById(userId);
+        if(userEntityOptional.isPresent()){
+            return userMapper.userEntityToUserDto(userEntityOptional.get());
+        }
+        return null;
+    }
+    @Override
+    public UserDto updateUser(long id, UserDto userDTO) {
+        UserEntity existingUser = userRepository.findById(id).get();
+        existingUser.setFirstName(userDTO.getFirstName());
+        existingUser.setLastName(userDTO.getLastName());
+        existingUser.setUsername(userDTO.getUsername());
+        existingUser.setEmail(userDTO.getEmail());
+        existingUser.setPassword(userDTO.getPassword());
+        existingUser.setGender(userDTO.getGender());
+        existingUser.setRole(userDTO.getRole());
+        existingUser.setIdSold(userDTO.getIdSold());
+        existingUser.setIdBills(userDTO.getIdBills());
+        existingUser.setIdEvents(userDTO.getIdEvents());
+        existingUser.setIdEventsPayement(userDTO.getIdEventsPayement());
+        existingUser.setIdTransaction(userDTO.getIdTransaction());
+        existingUser.setIdItemsForSale(userDTO.getIdItemsForSale());
+        existingUser.setIdItemsBought(userDTO.getIdItemsBought());
+        existingUser.setIdNotifications(userDTO.getIdNotifications());
+
+        UserEntity savedUserEntity = userRepository.save(existingUser);
+        return userMapper.userEntityToUserDto(savedUserEntity);
+    }
+    @Override
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+
+    }
+
+//    @Override
+//    public List<UserDto> getAllUsersByRole(RoleUser role) {
+//        return null;
+//    }
+
+    @Override
+    public List<UserDto> getAllUsers() {
+        List<UserEntity> userEntity = userRepository.findAll();
+        return userEntity.stream().map(userMapper::userEntityToUserDto).collect(Collectors.toList());
+    }
+}
