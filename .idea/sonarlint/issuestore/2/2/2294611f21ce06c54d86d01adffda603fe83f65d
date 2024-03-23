@@ -1,0 +1,8 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8ŠåÆíæ1J$8c803722-6b9b-41d9-91d0-b6db42ec3e58
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜ÇÜÇøÿÿÿÿ8åÆíæ1J$af996859-ae4a-4f08-bf8e-eca54a527a4e
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8åÆíæ1J$4824296f-e1cc-47cd-9779-d46bde756316
+
+java:S1144"7Remove this unused private "getAllTransactions" method.(˜ÇÜÇøÿÿÿÿ8”åÆíæ1J$af7ee49c-0dae-4059-9902-1bc9cf4260f0
