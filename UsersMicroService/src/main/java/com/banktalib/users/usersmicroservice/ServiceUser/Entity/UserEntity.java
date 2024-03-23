@@ -6,8 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -24,12 +23,6 @@ public class UserEntity {
             strategy = GenerationType.SEQUENCE,
             generator = "user_sequence")
     private Long idUser;
-
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name = "last_name")
-    private String lastName;
 
     @Column(name = "username")
     private String username;
@@ -48,28 +41,5 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private RoleUser role;
 
-    @Column(name = "idSold")
-    private long idSold;
-
-    @Column(name = "idBills")
-    private long idBills;
-
-    @Column(name = "idEvents")
-    private long idEvents;
-
-    @Column(name = "idEventsPayement")
-    private long idEventsPayement;
-
-    @Column(name = "idTransaction")
-    private long idTransaction;
-
-    @Column(name = "idItemsForSale")
-    private long idItemsForSale;
-
-    @Column(name = "idItemsBought")
-    private long idItemsBought;
-
-    @Column(name = "idNotifications")
-    private long idNotifications;
 
 }

@@ -40,21 +40,13 @@ public class UserService implements IUserService {
     @Override
     public UserDto updateUser(long id, UserDto userDTO) {
         UserEntity existingUser = userRepository.findById(id).get();
-        existingUser.setFirstName(userDTO.getFirstName());
-        existingUser.setLastName(userDTO.getLastName());
+
         existingUser.setUsername(userDTO.getUsername());
         existingUser.setEmail(userDTO.getEmail());
         existingUser.setPassword(userDTO.getPassword());
         existingUser.setGender(userDTO.getGender());
         existingUser.setRole(userDTO.getRole());
-        existingUser.setIdSold(userDTO.getIdSold());
-        existingUser.setIdBills(userDTO.getIdBills());
-        existingUser.setIdEvents(userDTO.getIdEvents());
-        existingUser.setIdEventsPayement(userDTO.getIdEventsPayement());
-        existingUser.setIdTransaction(userDTO.getIdTransaction());
-        existingUser.setIdItemsForSale(userDTO.getIdItemsForSale());
-        existingUser.setIdItemsBought(userDTO.getIdItemsBought());
-        existingUser.setIdNotifications(userDTO.getIdNotifications());
+
 
         UserEntity savedUserEntity = userRepository.save(existingUser);
         return userMapper.userEntityToUserDto(savedUserEntity);
