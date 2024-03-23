@@ -1,20 +1,6 @@
 version: '3.1'
 
 services:
-#  publication-db:
-#    container_name: publication-microservice-db
-#    image: postgres:16
-#    environment:
-#      POSTGRES_USER: publication_microservice
-#      POSTGRES_PASSWORD: publication_microservice
-#      PGDATA: /data/postgres
-#    volumes:
-#      - publication-db:/data/postgres
-#    ports:
-#      - "5223:5432"
-#    networks:
-#      - db
-#    restart: unless-stopped
 
  users-db:
   container_name: users-database
@@ -32,11 +18,98 @@ services:
     - db
   restart: unless-stopped
 
+ payement-db:
+   container_name: payement-database
+   image: postgres:16
+   environment:
+     POSTGRES_USER: ryukiro
+     POSTGRES_PASSWORD: ryukiro
+     POSTGRES_DB: payement-database
+     PGDATA: /data/postgres
+   volumes:
+     - payement-db:/data/postgres
+   ports:
+     - "5223:5432"
+   networks:
+     - db
+   restart: unless-stopped
+
+ notification-db:
+   container_name: notification-database
+   image: postgres:16
+   environment:
+     POSTGRES_USER: ryukiro
+     POSTGRES_PASSWORD: ryukiro
+     POSTGRES_DB: notification-database
+     PGDATA: /data/postgres
+   volumes:
+     - notification-db:/data/postgres
+   ports:
+     - "5224:5432"
+   networks:
+     - db
+   restart: unless-stopped
+
+ trackingexp-db:
+   container_name: trackingexp-database
+   image: postgres:16
+   environment:
+     POSTGRES_USER: ryukiro
+     POSTGRES_PASSWORD: ryukiro
+     POSTGRES_DB: trackingexp-database
+     PGDATA: /data/postgres
+   volumes:
+     - trackingexp-db:/data/postgres
+   ports:
+     - "5225:5432"
+   networks:
+     - db
+   restart: unless-stopped
+
+ event-db:
+   container_name: event-database
+   image: postgres:16
+   environment:
+     POSTGRES_USER: ryukiro
+     POSTGRES_PASSWORD: ryukiro
+     POSTGRES_DB: event-database
+     PGDATA: /data/postgres
+   volumes:
+     - event-db:/data/postgres
+   ports:
+     - "5226:5432"
+   networks:
+     - db
+   restart: unless-stopped
+
+ communication-db:
+   container_name: communication-database
+   image: postgres:16
+   environment:
+     POSTGRES_USER: ryukiro
+     POSTGRES_PASSWORD: ryukiro
+     POSTGRES_DB: communication-database
+     PGDATA: /data/postgres
+   volumes:
+     - communication-db:/data/postgres
+   ports:
+     - "5227:5432"
+   networks:
+     - db
+   restart: unless-stopped
+
+
+
+
 networks:
   db:
     driver: bridge
 
+
 volumes:
   users-db:
-#
-#  publication-db:
+  payement-db:
+  notification-db:
+  trackingexp-db:
+  event-db:
+  communication-db:
