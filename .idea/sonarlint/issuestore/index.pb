@@ -17,3 +17,9 @@ D
 EventService/pom.xml,5\5\553e44f29fce5cc03a110d883e32ec5d4a3300a4
 L
 CommunicationService/pom.xml,f\1\f19be9a69d9fd844e57ae840359307e647c2952a
+˜
+hUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Entity/UserEntity.java,2\f\2f7ccc49560400a4e16ffda1419e95b3c8e7dae1
+B
+docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
+©
+yUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Service/Implimentation/UserService.java,2\8\289739cf6c2dbb83474355f0a2225741272375ab

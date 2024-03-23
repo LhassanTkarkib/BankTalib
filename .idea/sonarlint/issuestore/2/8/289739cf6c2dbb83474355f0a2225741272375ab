@@ -1,11 +1,9 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8èÂĞÇå1J$976d3aa0-b733-4a03-b355-97e0f0d13fc2
-m
-java:S3655*"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8è­äÈå1
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8èÂĞÇå1J$4c7ca1b2-03cb-482a-b19a-f79e280c1f5a
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷ÂĞÇå1J$5e96c2cd-aecc-45c5-a466-8f990d73b3bc
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷ÂĞÇå1J$44e22e8e-17da-489f-9740-baa2f59af349
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8øÂĞÇå1J$bcaca6fd-bea4-46ca-a794-87418739d431
-~	java:S125E"<This block of commented-out lines of code should be removed.(ß·‹†8ªÚØÇå1J$5b4a91f9-2265-4c81-a2a2-5aade3e1d4aa
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8øÂĞÇå1J$ee98bba0-1600-443b-be52-ee062b675a4d
+~	java:S125E"<This block of commented-out lines of code should be removed.(ß·‹†8ªÚØÇå1J$a9b25222-379f-4127-902a-da8bb3cefc72
 o
-java:S6204L"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8Œ®äÈå1
+java:S6204L"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8¹İ†ìæ1
