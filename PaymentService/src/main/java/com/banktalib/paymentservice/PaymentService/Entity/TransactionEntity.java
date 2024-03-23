@@ -2,7 +2,6 @@ package com.banktalib.paymentservice.PaymentService.Entity;
 
 
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
-import com.banktalib.users.usersmicroservice.ServiceUser.Entity.AccountEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,7 +16,7 @@ import java.util.*;
 @Builder
 @Entity
 @Table(name = "transaction")
-public class Transaction {
+public class TransactionEntity {
     @Id
     @SequenceGenerator(
             name = "transaction_sequence",

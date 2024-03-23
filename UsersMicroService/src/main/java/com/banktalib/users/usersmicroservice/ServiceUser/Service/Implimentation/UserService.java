@@ -40,7 +40,6 @@ public class UserService implements IUserService {
     @Override
     public UserDto updateUser(long id, UserDto userDTO) {
         UserEntity existingUser = userRepository.findById(id).get();
-
         existingUser.setUsername(userDTO.getUsername());
         existingUser.setEmail(userDTO.getEmail());
         existingUser.setPassword(userDTO.getPassword());
