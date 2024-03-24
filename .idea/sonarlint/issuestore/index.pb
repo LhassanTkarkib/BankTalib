@@ -51,3 +51,13 @@ s
 CGateway/src/main/java/com/banktalib/gateway/GatewayApplication.java,a\0\a09cbe5879bb570a4cb56b7c3f35c7d3ebb45be7
 }
 MGateway/src/main/java/com/banktalib/gateway/config/KeycloakRoleConverter.java,1\d\1d62fb8ae280f81e1b924f53b4ab10a27082f998
+£
+sUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Controller/AccountController.java,7\0\70b10f7d92a7fb86a539c4dd98da4383a1f10490
+£
+sUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Repository/AccountRepository.java,0\8\0883e2865f10676beff1c32f263bbc8b7dd22aaa
+ 
+pUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Repository/UserRepository.java,7\1\716b20d7775a6b57ca38022b82afa5c12a90c500
+¬
+|UsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Service/Implimentation/AccountService.java,d\d\dd1149085b965c0788a42466f821e9759113ded4
+ž
+nUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Service/IAccountService.java,a\5\a52e6d61f21702494b6199b945caa6709d8214c5

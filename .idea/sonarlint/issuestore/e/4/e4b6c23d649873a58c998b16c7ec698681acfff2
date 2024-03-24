@@ -1,8 +1,8 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğ‘ìùÿÿÿÿ8…Ûşìæ1J$5e2225fd-ba7c-4625-8d70-d5a82e1eafb7
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğ‘ìùÿÿÿÿ8…Ûşìæ1J$7170bf7d-00c9-4f99-806e-a4272629abf5
 b
-java:S1948"&Make "user" transient or serializable.(ß–óÕJ$c6dbe2f6-2f67-459f-b50a-65dd7fa4aadf
+java:S1948"&Make "user" transient or serializable.(ß–óÕJ$a2fb9608-80ef-4878-92f1-221cba295836
 ‹
-java:S1128"CRemove this unused import 'jakarta.validation.constraints.NotNull'.(Àª•ıÿÿÿÿ8èÿìæ1J$a22772db-16a4-476a-b752-20014e9b1bff
-G
-java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8×¤€íæ1
+java:S1128"CRemove this unused import 'jakarta.validation.constraints.NotNull'.(Àª•ıÿÿÿÿ8èÿìæ1J$5e0a8799-30c5-4b48-910b-cac1c218a8c2
+m
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8×¤€íæ1J$b53307da-8177-4f48-8c27-8e12ec985f06
