@@ -32,6 +32,8 @@ public class AccountEntity {
     @Column(name = "Balance")
     private double balance;
 
+//    private Long idUser;
+
     @OneToOne
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     private UserEntity user;

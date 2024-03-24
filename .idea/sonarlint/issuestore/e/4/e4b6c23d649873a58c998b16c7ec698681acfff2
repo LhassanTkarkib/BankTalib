@@ -1,0 +1,8 @@
+
+΅	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(π‘μωÿÿÿÿ8ά–ύ†η1J$8165ff4e-c555-45e2-bc2c-77e77a941646
+i
+java:S1948"&Make "user" transient or serializable.(µ¤ γ8β–ύ†η1J$7760fa14-0e2f-4316-ac43-987f7b71ea56
+‹
+java:S1128"CRemove this unused import 'jakarta.validation.constraints.NotNull'.(ΐª•ύÿÿÿÿ8ζ–ύ†η1J$894a1239-1c99-4a48-a934-456e4b4d3a21
+m
+java:S1128"*Remove this unused import 'lombok.Getter'.(ωÒµΩ8ζ–ύ†η1J$9d876e67-9cbf-457b-aa37-bcadfd004c48
