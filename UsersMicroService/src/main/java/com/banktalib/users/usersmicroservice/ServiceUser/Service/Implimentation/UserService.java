@@ -30,6 +30,12 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public List<UserDto> getAllUsers() {
+        List<UserEntity> userEntity = userRepository.findAll();
+        return userEntity.stream().map(userMapper::userEntityToUserDto).collect(Collectors.toList());
+    }
+
+    @Override
     public UserDto getUser(Long userId) {
         Optional<UserEntity> userEntityOptional = userRepository.findById(userId);
         if(userEntityOptional.isPresent()){
@@ -40,23 +46,8 @@ public class UserService implements IUserService {
     @Override
     public UserDto updateUser(long id, UserDto userDTO) {
         UserEntity existingUser = userRepository.findById(id).get();
-        existingUser.setFirstName(userDTO.getFirstName());
-        existingUser.setLastName(userDTO.getLastName());
-        existingUser.setUsername(userDTO.getUsername());
-        existingUser.setEmail(userDTO.getEmail());
-        existingUser.setPassword(userDTO.getPassword());
-        existingUser.setGender(userDTO.getGender());
-        existingUser.setRole(userDTO.getRole());
-        existingUser.setIdSold(userDTO.getIdSold());
-        existingUser.setIdBills(userDTO.getIdBills());
-        existingUser.setIdEvents(userDTO.getIdEvents());
-        existingUser.setIdEventsPayement(userDTO.getIdEventsPayement());
-        existingUser.setIdTransaction(userDTO.getIdTransaction());
-        existingUser.setIdItemsForSale(userDTO.getIdItemsForSale());
-        existingUser.setIdItemsBought(userDTO.getIdItemsBought());
-        existingUser.setIdNotifications(userDTO.getIdNotifications());
-
-        UserEntity savedUserEntity = userRepository.save(existingUser);
+        UserEntity updatedUser = userMapper.partialUpdate(userDTO, existingUser);
+        UserEntity savedUserEntity = userRepository.save(updatedUser);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }
     @Override
@@ -70,9 +61,5 @@ public class UserService implements IUserService {
 //        return null;
 //    }
 
-    @Override
-    public List<UserDto> getAllUsers() {
-        List<UserEntity> userEntity = userRepository.findAll();
-        return userEntity.stream().map(userMapper::userEntityToUserDto).collect(Collectors.toList());
-    }
+
 }

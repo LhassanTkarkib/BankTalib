@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/Discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EventService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ExpenseTrackingService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FeignClient/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/NotificationService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PaymentService/src/main/java" charset="UTF-8" />
