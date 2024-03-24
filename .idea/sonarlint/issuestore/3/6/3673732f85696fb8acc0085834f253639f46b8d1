@@ -1,16 +1,6 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8·Öîíæ1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1
-Y
-java:S1144"7Remove this unused private "getAllTransactions" method.(˜ÇÜÇøÿÿÿÿ8ÆÖîíæ1
-P
-java:S1144"3Remove this unused private "getTransaction" method.(°ï8ÆÖîíæ1
-X
-java:S1144!"6Remove this unused private "createTransaction" method.(êÜë…øÿÿÿÿ8ÆÖîíæ1
-S
-java:S1144'"6Remove this unused private "updateTransaction" method.(§å8ÆÖîíæ1
-X
-java:S1144."6Remove this unused private "deleteTransaction" method.(ÏâËÅùÿÿÿÿ8ÆÖîíæ1
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8·Öîíæ1J$6108d908-5de2-42b1-9d0f-cc077b072ad1
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1J$e5d697bc-ea87-40a0-8b5f-1d9d59fa6725
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1J$18f49d64-9663-4c21-b96c-b54a51a01959

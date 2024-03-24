@@ -20,30 +20,35 @@ public class TransactionService implements ITransactionService {
     @Autowired
     private TransactionMapper transactionMapper;
 
-    private List<TransactionDto> getAllTransactions() {
+    @Override
+    public List<TransactionDto> getAllTransactions() {
         List<TransactionEntity> transactionS = transactionRepository.findAll();
         return transactionS.stream().map(transactionMapper::toDto).collect(Collectors.toList());
     }
 
-    private TransactionDto getTransaction(Long id) {
+    @Override
+    public TransactionDto getTransaction(Long id) {
         TransactionEntity transaction = transactionRepository.findById(id).get();
         return transactionMapper.toDto(transaction);
     }
 
-    private TransactionDto createTransaction(TransactionDto transactionDto) {
+    @Override
+    public TransactionDto createTransaction(TransactionDto transactionDto) {
         TransactionEntity transaction = transactionMapper.toEntity(transactionDto);
         TransactionEntity savedTransaction = transactionRepository.save(transaction);
         return transactionMapper.toDto(savedTransaction);
     }
 
-    private TransactionDto updateTransaction(Long id, TransactionDto transactionDto) {
+    @Override
+    public TransactionDto updateTransaction(Long id, TransactionDto transactionDto) {
         TransactionEntity existingTransaction = transactionRepository.findById(id).get();
         TransactionEntity updatedTransaction = transactionMapper.partialUpdate(transactionDto, existingTransaction);
         TransactionEntity savedTransaction = transactionRepository.save(updatedTransaction);
         return transactionMapper.toDto(savedTransaction);
     }
 
-    private void deleteTransaction(Long id) {
+    @Override
+    public void deleteTransaction(Long id) {
         transactionRepository.deleteById(id);
     }
 

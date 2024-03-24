@@ -41,3 +41,7 @@ aPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Servic
 xPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/Implimenetation/TransactionService.java,3\6\3673732f85696fb8acc0085834f253639f46b8d1
 ˜
 hUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Mapper/UserMapper.java,a\1\a12f3a399ae919beb1e95c63538bc71483a5a28d
+™
+iPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/ITransactionService.java,1\1\1108612f22ce7294a39be7b764c9f87f94fa77b2
+›
+kUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Service/IUserService.java,b\6\b6ea50a68655c9eef392684cc35a43345df1a910
