@@ -27,7 +27,7 @@ public class TransactionEntity {
             generator = "transaction_sequence")
     private Long idTransaction;
 
-    private double amount;
+    private Double amount;
 
     @Column(name = "DateTransaction")
     private Date dateTransaction;
@@ -36,10 +36,10 @@ public class TransactionEntity {
     private TransactionType typeTransaction;
 
     @Column(name = "idSenderAccount")
-    private long idSenderAccount;
+    private Long idSenderAccount;
 
     @Column(name = "idReceiverAccount")
-    private long idReceiverAccount;
+    private Long idReceiverAccount;
 
 
 }
