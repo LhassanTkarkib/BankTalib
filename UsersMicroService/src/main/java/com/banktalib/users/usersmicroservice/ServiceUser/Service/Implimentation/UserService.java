@@ -30,6 +30,12 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public List<UserDto> getAllUsers() {
+        List<UserEntity> userEntity = userRepository.findAll();
+        return userEntity.stream().map(userMapper::userEntityToUserDto).collect(Collectors.toList());
+    }
+
+    @Override
     public UserDto getUser(Long userId) {
         Optional<UserEntity> userEntityOptional = userRepository.findById(userId);
         if(userEntityOptional.isPresent()){
@@ -40,15 +46,8 @@ public class UserService implements IUserService {
     @Override
     public UserDto updateUser(long id, UserDto userDTO) {
         UserEntity existingUser = userRepository.findById(id).get();
-
-        existingUser.setUsername(userDTO.getUsername());
-        existingUser.setEmail(userDTO.getEmail());
-        existingUser.setPassword(userDTO.getPassword());
-        existingUser.setGender(userDTO.getGender());
-        existingUser.setRole(userDTO.getRole());
-
-
-        UserEntity savedUserEntity = userRepository.save(existingUser);
+        UserEntity updatedUser = userMapper.partialUpdate(userDTO, existingUser);
+        UserEntity savedUserEntity = userRepository.save(updatedUser);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }
     @Override
@@ -62,9 +61,5 @@ public class UserService implements IUserService {
 //        return null;
 //    }
 
-    @Override
-    public List<UserDto> getAllUsers() {
-        List<UserEntity> userEntity = userRepository.findAll();
-        return userEntity.stream().map(userMapper::userEntityToUserDto).collect(Collectors.toList());
-    }
+
 }

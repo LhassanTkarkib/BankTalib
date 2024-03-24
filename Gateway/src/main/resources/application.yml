@@ -23,6 +23,15 @@ spring:
           predicates:
             - Path=/api/v1/users/**
 
+        - id: account-data
+          uri: http://localhost:5050
+          predicates:
+            - Path=/api/v1/accounts/**
+
+        - id: payments-data
+          uri: http://localhost:6060
+          predicates:
+            - Path=/api/v1/transactions/**
     discovery:
       enabled: true
     config:

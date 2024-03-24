@@ -32,32 +32,13 @@ public class AccountEntity {
     @Column(name = "Balance")
     private double balance;
 
+//    private Long idUser;
+
     @OneToOne
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     private UserEntity user;
 
 
 
-//
-//    @Column(name = "idBills")
-//    private long idBills;
-//
-//    @Column(name = "idEvents")
-//    private long idEvents;
-//
-//    @Column(name = "idEventsPayement")
-//    private long idEventsPayement;
-//
-//    @Column(name = "idTransaction")
-//    private long idTransaction;
-//
-//    @Column(name = "idItemsForSale")
-//    private long idItemsForSale;
-//
-//    @Column(name = "idItemsBought")
-//    private long idItemsBought;
-//
-//    @Column(name = "idNotifications")
-//    private long idNotifications;
 
 }

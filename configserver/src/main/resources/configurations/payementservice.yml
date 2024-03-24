@@ -1,0 +1,17 @@
+server:
+  port: 6060
+
+spring:
+  application:
+    name: payamentservice
+  datasource:
+    url: jdbc:postgresql://localhost:5223/payement-database
+    username: ryukiro
+    password: ryukiro
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

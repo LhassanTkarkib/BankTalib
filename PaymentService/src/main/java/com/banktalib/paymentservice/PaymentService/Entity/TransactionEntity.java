@@ -2,7 +2,6 @@ package com.banktalib.paymentservice.PaymentService.Entity;
 
 
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
-import com.banktalib.users.usersmicroservice.ServiceUser.Entity.AccountEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,7 +16,7 @@ import java.util.*;
 @Builder
 @Entity
 @Table(name = "transaction")
-public class Transaction {
+public class TransactionEntity {
     @Id
     @SequenceGenerator(
             name = "transaction_sequence",
@@ -28,7 +27,7 @@ public class Transaction {
             generator = "transaction_sequence")
     private Long idTransaction;
 
-    private double amount;
+    private Double amount;
 
     @Column(name = "DateTransaction")
     private Date dateTransaction;
@@ -37,10 +36,10 @@ public class Transaction {
     private TransactionType typeTransaction;
 
     @Column(name = "idSenderAccount")
-    private long idSenderAccount;
+    private Long idSenderAccount;
 
     @Column(name = "idReceiverAccount")
-    private long idReceiverAccount;
+    private Long idReceiverAccount;
 
 
 }
