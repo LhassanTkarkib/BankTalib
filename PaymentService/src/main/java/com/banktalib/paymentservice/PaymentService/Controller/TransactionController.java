@@ -7,9 +7,7 @@ import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,30 +18,28 @@ public class TransactionController {
     @Autowired
     private ITransactionService transactionService;
 
-
-
     @GetMapping
     public ResponseEntity<List<TransactionDto>> getAllTransactions() {
         return new ResponseEntity<>(transactionService.getAllTransactions(), HttpStatus.OK);
     }
 
     @GetMapping ("/getTransactionById/{id}")
-    public ResponseEntity<TransactionDto> getTransaction(Long id) {
+    public ResponseEntity<TransactionDto> getTransaction(@PathVariable Long id) {
         return new ResponseEntity<>(transactionService.getTransaction(id), HttpStatus.OK);
     }
 
-    @GetMapping ("/createTransaction")
-    public ResponseEntity<TransactionDto> createTransaction(TransactionDto transactionDto) {
+    @PostMapping ("/createTransaction")
+    public ResponseEntity<TransactionDto> createTransaction(@RequestBody TransactionDto transactionDto) {
         return new ResponseEntity<>(transactionService.createTransaction(transactionDto), HttpStatus.CREATED);
     }
 
-    @GetMapping ("/updateTransaction/{id}")
-    public ResponseEntity<TransactionDto> updateTransaction(Long id, TransactionDto transactionDto) {
+    @PutMapping("/updateTransaction/{id}")
+    public ResponseEntity<TransactionDto> updateTransaction(@PathVariable Long id,@RequestBody TransactionDto transactionDto) {
         return new ResponseEntity<>(transactionService.updateTransaction(id, transactionDto), HttpStatus.OK);
     }
 
-    @GetMapping ("/deleteTransaction/{id}")
-    public ResponseEntity<Void> deleteTransaction(Long id) {
+    @DeleteMapping("/deleteTransaction/{id}")
+    public ResponseEntity<Void> deleteTransaction(@PathVariable Long id) {
         transactionService.deleteTransaction(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

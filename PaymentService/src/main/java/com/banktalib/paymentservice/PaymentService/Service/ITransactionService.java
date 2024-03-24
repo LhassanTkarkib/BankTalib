@@ -12,7 +12,7 @@ public interface ITransactionService {
 
     TransactionDto createTransaction(TransactionDto transactionDto);
 
-    TransactionDto updateTransaction(Long id, TransactionDto transactionDto);
+    TransactionDto updateTransaction(long id, TransactionDto transactionDto);
 
     void deleteTransaction(Long id);
 }

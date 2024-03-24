@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: payementservice
+  config:
+    import: optional:configserver:http://localhost:8888

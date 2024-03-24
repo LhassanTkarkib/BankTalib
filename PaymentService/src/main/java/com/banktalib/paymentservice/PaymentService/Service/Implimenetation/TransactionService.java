@@ -40,10 +40,10 @@ public class TransactionService implements ITransactionService {
     }
 
     @Override
-    public TransactionDto updateTransaction(Long id, TransactionDto transactionDto) {
+    public TransactionDto updateTransaction(long id, TransactionDto transactionDto) {
         TransactionEntity existingTransaction = transactionRepository.findById(id).get();
-        TransactionEntity updatedTransaction = transactionMapper.partialUpdate(transactionDto, existingTransaction);
-        TransactionEntity savedTransaction = transactionRepository.save(updatedTransaction);
+        transactionMapper.partialUpdate(existingTransaction, transactionDto);
+        TransactionEntity savedTransaction = transactionRepository.save(existingTransaction);
         return transactionMapper.toDto(savedTransaction);
     }
 

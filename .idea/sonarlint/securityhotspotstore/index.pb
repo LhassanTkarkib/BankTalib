@@ -45,3 +45,9 @@ hUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUs
 iPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/ITransactionService.java,1\1\1108612f22ce7294a39be7b764c9f87f94fa77b2
 ›
 kUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Service/IUserService.java,b\6\b6ea50a68655c9eef392684cc35a43345df1a910
+F
+PaymentService/pom.xml,8\3\83e3eb4674e29f7c9b9cd1e219c0453bd4b765e7
+s
+CGateway/src/main/java/com/banktalib/gateway/GatewayApplication.java,a\0\a09cbe5879bb570a4cb56b7c3f35c7d3ebb45be7
+}
+MGateway/src/main/java/com/banktalib/gateway/config/KeycloakRoleConverter.java,1\d\1d62fb8ae280f81e1b924f53b4ab10a27082f998

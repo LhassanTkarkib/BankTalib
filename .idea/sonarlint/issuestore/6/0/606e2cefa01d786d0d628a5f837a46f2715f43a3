@@ -1,2 +1,4 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ªò­ùÿÿÿÿJ$4d484b08-82f0-4ed9-ba1f-a0183a853434
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ªò­ùÿÿÿÿJ$d6029552-9544-47c2-a92a-1081005aa229
+m
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8Ë‰«…ç1J$d617581f-9d9f-46f8-a64f-bf661edad49c

@@ -1,6 +1,12 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8·Öîíæ1J$6108d908-5de2-42b1-9d0f-cc077b072ad1
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8·Öîíæ1J$da14d09c-5a10-4957-ac78-df8f48cb6ea4
+’
+java:S3655,"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ë»Õ>8úùøîæ1J$72f903cd-e911-4a1d-9401-dea0cced2ecc
+m
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ìò’Ç8±Û”ïæ1
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1J$e5d697bc-ea87-40a0-8b5f-1d9d59fa6725
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1J$6dd02715-1693-4ef4-a3f2-f65d36b1fd4c
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1J$18f49d64-9663-4c21-b96c-b54a51a01959
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ºÖîíæ1J$4773526e-1765-44b3-82c9-1419adc176f2
+•
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(è…Ù8‡úøîæ1J$8a5ee3cb-5790-4d82-81b4-76e3ebeb18ca
