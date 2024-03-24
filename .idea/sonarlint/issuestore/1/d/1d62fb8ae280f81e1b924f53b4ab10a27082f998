@@ -1,0 +1,5 @@
+
+¤
+java:S1488"cImmediately return this expression instead of assigning it to the temporary variable "returnValue".(¸Ë¾€úÿÿÿÿJ$e9ac5f13-44c6-4525-ab91-6f2d99a5dcac
+Ž
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹J$5929f81b-0d5b-469a-926e-09cd4db07cb5

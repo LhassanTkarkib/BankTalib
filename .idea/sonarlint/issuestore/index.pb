@@ -25,3 +25,15 @@ x
 HFeignClient/src/main/java/com/banktalib/feignclient/user/UserClient.java,6\a\6a935be2fc9ba09a8a6583f93d702d48e20fe611
 
 OFeignClient/src/main/java/com/banktalib/feignclient/FeignClientApplication.java,b\4\b4749d5f7220d01805d2fcd136667d3796fb7efc
+v
+FGateway/src/main/java/com/banktalib/gateway/config/KeycloakConfig.java,5\7\5759bd214f1e567f5cd2f5c8eceb9e502b46070f
+s
+CGateway/src/main/java/com/banktalib/gateway/config/Credentials.java,c\7\c75926506e0ef67942b94adb97404f7179f53d48
+z
+JGateway/src/main/java/com/banktalib/gateway/config/KeyCloakController.java,7\2\72a132f223568f707b954152f5975e49650704e9
+w
+GGateway/src/main/java/com/banktalib/gateway/config/KeyCloakService.java,4\0\40b1f9eec2cb1d5a5d2b5173ea295e534b71085d
+}
+MGateway/src/main/java/com/banktalib/gateway/config/KeycloakRoleConverter.java,1\d\1d62fb8ae280f81e1b924f53b4ab10a27082f998
+v
+FGateway/src/main/java/com/banktalib/gateway/config/SecurityConfig.java,c\a\ca28d8e21a8fbeb9aff68d4f8b1268c5ccd37f80
