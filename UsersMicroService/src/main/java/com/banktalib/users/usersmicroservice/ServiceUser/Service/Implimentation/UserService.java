@@ -56,10 +56,6 @@ public class UserService implements IUserService {
 
     }
 
-//    @Override
-//    public List<UserDto> getAllUsersByRole(RoleUser role) {
-//        return null;
-//    }
 
 
 }

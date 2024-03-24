@@ -17,3 +17,11 @@ s
 CGateway/src/main/java/com/banktalib/gateway/GatewayApplication.java,a\0\a09cbe5879bb570a4cb56b7c3f35c7d3ebb45be7
 I
 UsersMicroService/pom.xml,f\c\fc01e86d3ca55182ab5f2f8078c2971693010429
+ 
+pUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Controller/UserController.java,3\5\3517c590063ea7be1a4ef2b920203a8858d687a7
+?
+Gateway/pom.xml,3\2\3237456de9f7ff101ceb260d44331867b68d4b95
+x
+HFeignClient/src/main/java/com/banktalib/feignclient/user/UserClient.java,6\a\6a935be2fc9ba09a8a6583f93d702d48e20fe611
+
+OFeignClient/src/main/java/com/banktalib/feignclient/FeignClientApplication.java,b\4\b4749d5f7220d01805d2fcd136667d3796fb7efc
