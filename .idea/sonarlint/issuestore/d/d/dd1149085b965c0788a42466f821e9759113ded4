@@ -1,16 +1,0 @@
-
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8£ÿÓˆç1J$81cc989e-e7e0-4410-9d0d-55c73f8237ef
-“
-java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ô÷·”8ŞŞİˆç1J$6a90875b-5fbd-4819-be4a-fed355a349e0
-˜
-java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿ8¯òÛˆç1J$89045fa7-a0af-4bc5-80fa-367c21d97287
-“
-java:S3655#"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼Ôá8°òÛˆç1J$5ddd6730-9dd3-439f-8769-317180dc4e5f
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8²òÛˆç1J$ad04707a-8bdd-4bbf-8a5e-2bda3b9c745f
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8³òÛˆç1J$2b399afe-d334-4121-a219-3358c32c0fe6
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8³òÛˆç1J$c0a150bc-b60a-481e-8fcf-03707106b42e
-š
-java:S6204'"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿ8¹òÛˆç1J$9243d392-bf0e-4597-b144-17ef2ccd3b32
