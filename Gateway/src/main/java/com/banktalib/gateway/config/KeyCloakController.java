@@ -1,6 +1,5 @@
 package com.banktalib.gateway.config;
 
-import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
 import lombok.AllArgsConstructor;
 import org.keycloak.representations.account.UserRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;

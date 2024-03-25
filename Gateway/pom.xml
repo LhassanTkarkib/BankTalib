@@ -63,12 +63,13 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
-            <groupId>com.banktalib.Users</groupId>
-            <artifactId>UsersMicroService</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>io.github.wimdeblauwe</groupId>
+            <artifactId>error-handling-spring-boot-starter</artifactId>
+            <version>4.2.0</version>
         </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

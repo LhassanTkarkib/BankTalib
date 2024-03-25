@@ -1,6 +1,5 @@
 package com.banktalib.gateway.config;
 
-import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.UsersResource;
 import org.keycloak.representations.idm.CredentialRepresentation;
@@ -15,8 +14,10 @@ public class KeyCloakService {
         CredentialRepresentation credential = Credentials
                 .createPasswordCredentials(userDTO.getPassword());
         UserRepresentation user = new UserRepresentation();
-        user.setUsername(userDTO.getUsername());
-        user.setEmail(userDTO.getEmail());
+        user.setUsername(userDTO.getUserName());
+        user.setFirstName(userDTO.getFirstname());
+        user.setLastName(userDTO.getLastName());
+        user.setEmail(userDTO.getEmailId());
         user.setCredentials(Collections.singletonList(credential));
         user.setEnabled(true);
 

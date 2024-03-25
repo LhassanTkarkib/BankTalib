@@ -37,3 +37,5 @@ GGateway/src/main/java/com/banktalib/gateway/config/KeyCloakService.java,4\0\40
 MGateway/src/main/java/com/banktalib/gateway/config/KeycloakRoleConverter.java,1\d\1d62fb8ae280f81e1b924f53b4ab10a27082f998
 v
 FGateway/src/main/java/com/banktalib/gateway/config/SecurityConfig.java,c\a\ca28d8e21a8fbeb9aff68d4f8b1268c5ccd37f80
+o
+?Gateway/src/main/java/com/banktalib/gateway/config/UserDto.java,8\6\861c152fa8adc1ca7305f1fde2dab6cac99eba68
