@@ -1,4 +1,4 @@
-package com.banktalib.gateway.config;
+package com.banktalib.gateway.config.DTO;
 
 
 import lombok.AllArgsConstructor;
@@ -13,11 +13,12 @@ import java.io.Serializable;
 @Data
 @Builder
 public class UserDto implements Serializable {
+
     private String userName;
     private String emailId;
     private String password;
     private String firstname;
     private String lastName;
-
+    private String roles;
 
 }

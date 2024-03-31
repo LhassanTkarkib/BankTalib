@@ -17,10 +17,9 @@ public class KeycloakConfig {
 //    final static String password = "123456";
 
     final static String serverUrl = "http://localhost:7080";
-    //    final static String serverUrl = "http://localhost:7080/auth";
     public final static String realm = "master";
-    final static String clientId = "social-network-auth";
-    final static String clientSecret = "xPhSVadmKcsDcQYewdUhvayNo4xTWKP4";
+    final static String clientId = "Bank-Talib-auth";
+    final static String clientSecret = "fZtdyqoE1VcOfTha8pod9pdy85aoT7GV";
     final static String userName = "admin";
     final static String password = "admin";
 
