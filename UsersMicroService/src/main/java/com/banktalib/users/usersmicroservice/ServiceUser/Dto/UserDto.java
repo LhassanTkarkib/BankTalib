@@ -11,11 +11,12 @@ import java.io.Serializable;
 @Data
 @Builder
 public class UserDto implements Serializable {
-    private Long idUser;
-    private String username;
+    private String userName;
     private String email;
     private String password;
+    private String firstname;
+    private String lastName;
     private Gender gender;
-    private RoleUser role;
+    private RoleUser roles;
 
 }

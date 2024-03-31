@@ -15,7 +15,6 @@
     <module>configserver</module>
     <module>Discovery</module>
     <module>Gateway</module>
-    <module>FeignClient</module>
     <module>CommunicationService</module>
     <module>NotificationService</module>
     <module>PaymentService</module>

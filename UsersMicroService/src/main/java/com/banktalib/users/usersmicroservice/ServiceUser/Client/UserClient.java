@@ -1,4 +1,4 @@
-package com.banktalib.feignclient.user;
+package com.banktalib.users.usersmicroservice.ServiceUser.Client;
 
 import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
 import jakarta.validation.Valid;
