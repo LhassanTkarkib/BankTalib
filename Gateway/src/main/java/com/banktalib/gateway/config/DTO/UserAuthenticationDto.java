@@ -14,6 +14,4 @@ public class UserAuthenticationDto {
     private String email;
 
     private String password;
-
-
 }

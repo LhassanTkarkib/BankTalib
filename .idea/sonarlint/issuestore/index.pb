@@ -57,3 +57,5 @@ ZPaymentService/src/main/java/com/banktalib/gateway/config/UserRepresentationDto
 PGateway/src/main/java/com/banktalib/gateway/config/UserRepresentationMapper.java,c\1\c1543d4c67e6b74561c61c615bdfb6019532e7b1
 á
 WGateway/src/main/java/com/banktalib/gateway/config/Mapper/UserRepresentationMapper.java,1\8\183b20932d0bf44a14e3c777e82d96a40cf9c017
+Å
+QGateway/src/main/java/com/banktalib/gateway/config/DTO/UserAuthenticationDto.java,8\3\83732e21af8e4499f4f16ac565ba5c2c1bfb0925
