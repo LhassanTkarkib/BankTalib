@@ -1,3 +1,10 @@
 
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ý±•·é1J$5dc4b373-7335-4e0b-a0e2-d271474bff1d
+~	java:S125"<This block of commented-out lines of code should be removed.(Ÿ“ÅÐ8âúþÝé1J$67268dfb-8f91-45b7-b383-cff2c8c641dd
+¡
+java:S1128"YRemove this unused import 'com.banktalib.gateway.config.Mapper.UserRepresentationMapper'.(ÀÅŠžþÿÿÿÿ8ÒµÿÝé1J$b052e62e-2591-4bbf-b4b9-e30c3d0404be
+›
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8ÒµÿÝé1J$939bc9f0-05bc-41b0-b0ef-e0673eae77b7
+›
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Qualifier'.(íàÄ®ýÿÿÿÿ8ÓµÿÝé1J$a0e328ac-1314-460c-a3d6-5546f23a7c9c
+Œ
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8ÔµÿÝé1J$15215bf1-ff34-420d-9350-269b76abe62f

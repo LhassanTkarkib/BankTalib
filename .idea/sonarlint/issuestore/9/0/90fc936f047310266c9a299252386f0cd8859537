@@ -1,0 +1,18 @@
+
+­
+java:S1598"äThis file "UserDto.java" should be located in "com\banktalib\gateway\config\DTO" directory, not in "C:\Users\Dell Latitude 5440\Desktop\java+projects\BankTalib\feign-clients\src\main\java\com.banktalib.feign-clients\UserClient".(Øšéöùÿÿÿÿ8ÕÎºĞé1J$c7cd26e8-274a-4ff3-9068-30c711a477be
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ØšéöùÿÿÿÿJ$a3cc3550-3bac-40fa-a840-d525ebbd8ea6
+t
+java:S1068",Remove this unused "userName" private field.(Û”øÚøÿÿÿÿ8İÎºĞé1J$54048fda-bf94-4b84-aebb-d538f3b73fdf
+q
+java:S1068")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ8ŞÎºĞé1J$2fe6b175-d3af-4f7c-8ab7-7dc75c2c35d3
+t
+java:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ8ßÎºĞé1J$9e1b7aea-c921-4d79-9ddc-113a1a0e531b
+u
+java:S1068"-Remove this unused "firstname" private field.(ŒøÂÆşÿÿÿÿ8ßÎºĞé1J$0a49d1c5-bae9-419e-9076-ab9546546b88
+t
+java:S1068",Remove this unused "lastName" private field.(ºàÑïúÿÿÿÿ8ßÎºĞé1J$cfaa9802-90b5-41d6-bbe7-901d63c22edb
+r
+java:S1068"*Remove this unused "gender" private field.(ŠÔŞ»ıÿÿÿÿ8ßÎºĞé1J$cb49db81-12ad-4edf-bcf9-8c587e19e54d
+q
+java:S1068")Remove this unused "roles" private field.(ÊåßÃÿÿÿÿÿ8àÎºĞé1J$96826c94-4b31-48d3-9257-0f764f7b7223

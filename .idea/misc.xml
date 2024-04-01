@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/CommunicationService/pom.xml" />
         <option value="$PROJECT_DIR$/ExpenseTrackingService/pom.xml" />
         <option value="$PROJECT_DIR$/FeignClient/pom.xml" />
+        <option value="$PROJECT_DIR$/feign-clients/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

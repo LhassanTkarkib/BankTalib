@@ -1,9 +1,8 @@
 package com.banktalib.gateway.config;
 
+import com.banktalib.UserClient.UserDto;
 import com.banktalib.gateway.config.DTO.AuthenticationResponse;
 import com.banktalib.gateway.config.DTO.UserAuthenticationDto;
-import com.banktalib.gateway.config.DTO.UserRepresentationDto;
-import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
 import lombok.AllArgsConstructor;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ import java.util.List;
         @Autowired
         KeyCloakService service;
         @PostMapping(path = "/register")
-        public ResponseEntity<UserDto> addUser(@RequestBody UserDto userDTO){
+        public UserDto addUser(@RequestBody UserDto userDTO){
             return service.addUser(userDTO);
         }
 

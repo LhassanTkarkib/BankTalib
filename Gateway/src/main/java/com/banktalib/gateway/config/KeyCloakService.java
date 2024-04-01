@@ -1,10 +1,12 @@
 package com.banktalib.gateway.config;
 
+import com.banktalib.UserClient.UserClient;
+import com.banktalib.UserClient.UserDto;
 import com.banktalib.gateway.config.DTO.AuthenticationResponse;
 import com.banktalib.gateway.config.DTO.UserAuthenticationDto;
 import com.banktalib.gateway.config.Mapper.UserRepresentationMapper;
-import com.banktalib.users.usersmicroservice.ServiceUser.Client.UserClient;
-import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
+
+import lombok.AllArgsConstructor;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
@@ -12,6 +14,7 @@ import org.keycloak.admin.client.resource.UsersResource;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -19,19 +22,15 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class KeyCloakService {
 
-    @Autowired
-    private UserRepresentationMapper userRepresentationMapper;
+//    @Autowired
+//    private UserRepresentationMapper userRepresentationMapper;
 
-    private final UserClient userClient;
+    private UserClient userClient;
 
-    public KeyCloakService(UserClient userClient) {
-        this.userClient = userClient;
-    }
-
-
-    public ResponseEntity<UserDto> addUser(UserDto userDTO){
+    public UserDto addUser(UserDto userDTO){
         CredentialRepresentation credential = Credentials
                 .createPasswordCredentials(userDTO.getPassword());
         UserRepresentation user = new UserRepresentation();
@@ -46,8 +45,9 @@ public class KeyCloakService {
         UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
         usersResource.create(user);
 
-    return userClient.createUser(userDTO);
+        userClient.createUser(userDTO);
 
+        return userDTO;
     }
 
     public AuthenticationResponse authenticate(UserAuthenticationDto userDTO){

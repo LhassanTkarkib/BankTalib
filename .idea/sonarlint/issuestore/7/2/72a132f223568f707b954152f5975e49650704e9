@@ -1,7 +1,7 @@
 
 Ÿ
-java:S1488#"\Immediately return this expression instead of assigning it to the temporary variable "user".(âÎ»É8½×Ž·é1J$c708ecab-f2d7-4b61-8b4c-3759496aafb2
+java:S1488""\Immediately return this expression instead of assigning it to the temporary variable "user".(âÎ»É8½×Ž·é1J$cb64c242-8fcc-4600-af37-5045b82f7900
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Æ×Ž·é1J$02b90079-faec-4de7-98ba-61a5e2010a25
-ƒ	java:S1254"<This block of commented-out lines of code should be removed.(êØ„ùÿÿÿÿ8Í×Ž·é1J$7e7f1962-4a89-4a78-a9d8-59b671a34a62
-~	java:S125:"<This block of commented-out lines of code should be removed.(Ä´²8Í×Ž·é1J$69af27cd-a1e1-4e9c-9ac4-64436815814a
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Æ×Ž·é1J$0e2adcdd-da4b-4f1a-a468-065066a90d7a
+ƒ	java:S1253"<This block of commented-out lines of code should be removed.(êØ„ùÿÿÿÿ8Í×Ž·é1J$7a9c6d61-09cc-42ac-86a2-e2d2b40a85ed
+~	java:S1259"<This block of commented-out lines of code should be removed.(Ä´²8Í×Ž·é1J$86690a9a-5cb1-41bf-8d4f-ca679fc517c2

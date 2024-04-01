@@ -15,14 +15,8 @@ spring:
         jwt:
           jwk-set-uri: http://localhost:7080/realms/BankTalib/protocol/openid-connect/certs
 
-  cloud:
     gateway:
       routes:
-        - id: auth-data
-          uri: http://localhost:8222
-          predicates:
-            - Path=/api/v1/KeyCloak/**
-
         - id: users-data
           uri: http://localhost:5050
           predicates:
