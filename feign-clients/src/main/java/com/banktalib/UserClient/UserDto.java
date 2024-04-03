@@ -20,5 +20,7 @@ public class UserDto implements Serializable {
     private String lastName;
     private Gender gender;
     private RoleUser roles;
+    private AccountDto account;
+
 
 }

@@ -1,0 +1,7 @@
+
+r
+java:S1488""\Immediately return this expression instead of assigning it to the temporary variable "user".(âÎ»É
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+V	java:S1253"<This block of commented-out lines of code should be removed.(êØ„ùÿÿÿÿ
+Q	java:S1259"<This block of commented-out lines of code should be removed.(Ä´²

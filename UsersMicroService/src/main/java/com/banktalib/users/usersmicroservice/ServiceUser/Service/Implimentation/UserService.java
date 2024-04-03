@@ -34,18 +34,17 @@ public class UserService implements IUserService {
         UserEntity savedUserEntity = userRepository.save(userEntity);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }
+
     @PrePersist
     public String generateAccountNumber() {
         Random random = new Random();
-        String accountNumber = String.valueOf(0);
-
-while (accountRepository.findByAccountNumber(accountNumber)){
-    int accountNumberInt = random.nextInt(90000000) + 10000000;
-    accountNumber = String.valueOf(accountNumberInt);
-
-}
-        return String.valueOf(accountNumber);
+        String accountNumber = String.valueOf(random.nextInt(90000000) + 10000000);
+        if (accountRepository.existsByAccountNumber(accountNumber)) {
+            accountNumber = String.valueOf(random.nextInt(90000000) + 10000000);
+        }
+        return accountNumber;
     }
+
     @Override
     public List<UserDto> getAllUsers() {
         List<UserEntity> userEntity = userRepository.findAll();
@@ -55,11 +54,12 @@ while (accountRepository.findByAccountNumber(accountNumber)){
     @Override
     public UserDto getUser(Long userId) {
         Optional<UserEntity> userEntityOptional = userRepository.findById(userId);
-        if(userEntityOptional.isPresent()){
+        if (userEntityOptional.isPresent()) {
             return userMapper.userEntityToUserDto(userEntityOptional.get());
         }
         return null;
     }
+
     @Override
     public UserDto updateUser(long id, UserDto userDTO) {
         UserEntity existingUser = userRepository.findById(id).get();
@@ -67,12 +67,12 @@ while (accountRepository.findByAccountNumber(accountNumber)){
         UserEntity savedUserEntity = userRepository.save(updatedUser);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }
+
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
 
     }
-
 
 
 }

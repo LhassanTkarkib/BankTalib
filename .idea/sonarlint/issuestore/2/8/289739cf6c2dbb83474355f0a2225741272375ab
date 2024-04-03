@@ -1,0 +1,16 @@
+
+E
+java:S5411*"(Use a primitive boolean expression here.(‰Ü„8©£°±ê1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8­£°±ê1
+m
+java:S3655A"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8½£°±ê1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8À£°±ê1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Á£°±ê1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Á£°±ê1
+:
+java:S2119("Save and re-use this "Random".(¼İÅf8È£°±ê1
+o
+java:S62043"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8Ë£°±ê1

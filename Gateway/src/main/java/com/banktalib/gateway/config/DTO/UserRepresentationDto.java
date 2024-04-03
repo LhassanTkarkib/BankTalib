@@ -1,5 +1,6 @@
 package com.banktalib.gateway.config.DTO;
 
+import com.banktalib.UserClient.AccountDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
