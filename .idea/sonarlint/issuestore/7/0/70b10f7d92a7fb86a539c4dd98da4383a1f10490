@@ -1,8 +1,8 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ô¡ê€üÿÿÿÿJ$6fc9d03c-4c39-4dce-b7d8-04ba93c2e617
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ô¡ê€üÿÿÿÿJ$2156e0bf-12ea-4a64-a381-8d6360a89624
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$6cd27522-ec12-4a6d-885e-589f5030566b
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$2cca46ba-e3d4-4183-8771-9796354ce1c7
 °
-java:S1128"tRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Service.Implimentation.AccountService'.(ÑžÈ€J$313acf2c-2eb8-47a4-b5a3-4d19ce8d3d1c
+java:S1128"tRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Service.Implimentation.AccountService'.(ÑžÈ€J$4a7639ff-ea0f-494a-bd97-098a5f603c93
 —
-java:S1128"VRemove this unused import 'org.mapstruct.ap.shaded.freemarker.core.ReturnInstruction'.(âëž¤ÿÿÿÿÿJ$fcc00ccc-12ef-480c-b583-e15eceeb4abf
+java:S1128"VRemove this unused import 'org.mapstruct.ap.shaded.freemarker.core.ReturnInstruction'.(âëž¤ÿÿÿÿÿJ$af4d72de-bbcb-41ba-a7ce-02103f188ce4
