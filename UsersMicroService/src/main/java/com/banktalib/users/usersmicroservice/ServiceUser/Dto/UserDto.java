@@ -1,5 +1,6 @@
 package com.banktalib.users.usersmicroservice.ServiceUser.Dto;
 
+import com.banktalib.users.usersmicroservice.ServiceUser.Entity.AccountEntity;
 import com.banktalib.users.usersmicroservice.ServiceUser.Enums.Gender;
 import com.banktalib.users.usersmicroservice.ServiceUser.Enums.RoleUser;
 import lombok.*;
@@ -17,5 +18,5 @@ public class UserDto implements Serializable {
     private String password;
     private Gender gender;
     private RoleUser role;
-
+    private AccountEntity account;
 }

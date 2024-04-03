@@ -1,6 +1,7 @@
-package com.banktalib.users.usersmicroservice.ServiceUser.Enums;
+package com.banktalib.UserClient;
 
 public enum RoleUser {
+
     STUDENT,
     SCHOOLADMIN,
     ADMIN

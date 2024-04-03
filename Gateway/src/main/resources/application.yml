@@ -14,7 +14,6 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:7080/realms/BankTalib/protocol/openid-connect/certs
-
   cloud:
     gateway:
       routes:
@@ -22,12 +21,10 @@ spring:
           uri: http://localhost:5050
           predicates:
             - Path=/api/v1/users/**
-
         - id: account-data
           uri: http://localhost:5050
           predicates:
             - Path=/api/v1/accounts/**
-
         - id: payments-data
           uri: http://localhost:6060
           predicates:
@@ -36,10 +33,3 @@ spring:
       enabled: true
     config:
       enabled: false
-
-
-
-
-
-
-

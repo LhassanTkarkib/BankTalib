@@ -16,11 +16,13 @@
         <option value="$PROJECT_DIR$/CommunicationService/pom.xml" />
         <option value="$PROJECT_DIR$/ExpenseTrackingService/pom.xml" />
         <option value="$PROJECT_DIR$/FeignClient/pom.xml" />
+        <option value="$PROJECT_DIR$/feign-clients/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Congiguration-server/pom.xml" />
+        <option value="$PROJECT_DIR$/FeignClient/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/configuration-server/pom.xml" />
       </set>

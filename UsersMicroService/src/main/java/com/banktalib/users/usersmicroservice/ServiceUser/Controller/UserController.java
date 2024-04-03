@@ -1,8 +1,8 @@
 package com.banktalib.users.usersmicroservice.ServiceUser.Controller;
 
 
-import com.banktalib.users.usersmicroservice.ServiceUser.Service.IUserService;
 import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
+import com.banktalib.users.usersmicroservice.ServiceUser.Service.IUserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

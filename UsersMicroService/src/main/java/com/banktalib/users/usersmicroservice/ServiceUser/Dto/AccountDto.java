@@ -18,8 +18,5 @@ public class AccountDto implements Serializable {
     private Long idAccount;
     private String accountNumber;
     private Double balance;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private Long idUser;
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private UserEntity user;
+
 }

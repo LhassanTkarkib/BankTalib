@@ -1,15 +1,18 @@
 package com.banktalib.users.usersmicroservice.ServiceUser.Service.Implimentation;
 
-import com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity;
-import com.banktalib.users.usersmicroservice.ServiceUser.Service.IUserService;
 import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
+import com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity;
 import com.banktalib.users.usersmicroservice.ServiceUser.Mapper.UserMapper;
+import com.banktalib.users.usersmicroservice.ServiceUser.Repository.AccountRepository;
+import com.banktalib.users.usersmicroservice.ServiceUser.Service.IUserService;
 import com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository;
+import jakarta.persistence.PrePersist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -17,18 +20,32 @@ public class UserService implements IUserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Autowired
     private UserMapper userMapper;
 
+
     @Override
     public UserDto createUser(UserDto userDto) {
-
         UserEntity userEntity = userMapper.userDtoToUserEntity(userDto);
+        userEntity.getAccount().setAccountNumber(generateAccountNumber());
         UserEntity savedUserEntity = userRepository.save(userEntity);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }
+    @PrePersist
+    public String generateAccountNumber() {
+        Random random = new Random();
+        String accountNumber = String.valueOf(0);
 
+while (accountRepository.findByAccountNumber(accountNumber)){
+    int accountNumberInt = random.nextInt(90000000) + 10000000;
+    accountNumber = String.valueOf(accountNumberInt);
+
+}
+        return String.valueOf(accountNumber);
+    }
     @Override
     public List<UserDto> getAllUsers() {
         List<UserEntity> userEntity = userRepository.findAll();
@@ -56,10 +73,6 @@ public class UserService implements IUserService {
 
     }
 
-//    @Override
-//    public List<UserDto> getAllUsersByRole(RoleUser role) {
-//        return null;
-//    }
 
 
 }

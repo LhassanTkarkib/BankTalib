@@ -2,8 +2,6 @@ package com.banktalib.paymentservice.PaymentService.Controller;
 
 import com.banktalib.paymentservice.PaymentService.Dto.TransactionDto;
 import com.banktalib.paymentservice.PaymentService.Service.ITransactionService;
-import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
-import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
