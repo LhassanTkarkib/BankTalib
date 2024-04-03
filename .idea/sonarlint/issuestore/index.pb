@@ -35,3 +35,9 @@ t
 Dfeign-clients/src/main/java/com/banktalib/UserClient/AccountDto.java,1\b\1b406abe9e4d8c614abecca598d6ec1b7da46766
 q
 Afeign-clients/src/main/java/com/banktalib/UserClient/UserDto.java,2\7\278d29f2c71fc76ebecb86333eb56b9b9c269dec
+t
+Dfeign-clients/src/main/java/com/banktalib/UserClient/UserClient.java,d\3\d312d4df2bca90a0888099a212befe38430603af
+˜
+hUsersMicroService/src/main/java/com/banktalib/users/usersmicroservice/ServiceUser/Mapper/UserMapper.java,a\1\a12f3a399ae919beb1e95c63538bc71483a5a28d
+p
+@feign-clients/src/main/java/com/banktalib/UserClient/Gender.java,a\c\ac1a2ae44f2d6d315c0f3d91b7220aa1d032661a

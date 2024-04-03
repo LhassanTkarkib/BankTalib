@@ -34,9 +34,9 @@ public class KeyCloakService {
         CredentialRepresentation credential = Credentials
                 .createPasswordCredentials(userDTO.getPassword());
         UserRepresentation user = new UserRepresentation();
-        user.setUsername(userDTO.getUserName());
+        user.setUsername(userDTO.getUsername());
         user.setFirstName(userDTO.getFirstname());
-        user.setLastName(userDTO.getLastName());
+        user.setLastName(userDTO.getLastname());
         user.setEmail(userDTO.getEmail());
         user.setCredentials(Collections.singletonList(credential));
         user.setEnabled(true);
@@ -45,9 +45,9 @@ public class KeyCloakService {
         UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
         usersResource.create(user);
 
-        userClient.createUser(userDTO);
+        ;
 
-        return userDTO;
+        return userClient.createUser(userDTO);
     }
 
     public AuthenticationResponse authenticate(UserAuthenticationDto userDTO){
@@ -76,7 +76,7 @@ public class KeyCloakService {
     public void updateUser(String userId, UserDto userDTO){
         UserRepresentation user = new UserRepresentation();
         user.setFirstName(userDTO.getFirstname());
-        user.setLastName(userDTO.getLastName());
+        user.setLastName(userDTO.getLastname());
         user.setEmail(userDTO.getEmail());
         user.setEnabled(true);
 

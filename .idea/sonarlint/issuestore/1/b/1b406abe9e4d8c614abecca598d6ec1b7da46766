@@ -1,2 +1,4 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(úà±´ûÿÿÿÿJ$15ef64c1-a333-4f4d-9d3a-0d65b3bbabf9
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(úà±´ûÿÿÿÿJ$6a00bc2a-bc63-4ab9-90a2-11c07cd9d735
+g
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonProperty'.(ËÃ§Ï8Ø¶û²ê1

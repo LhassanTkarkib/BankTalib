@@ -1,4 +1,4 @@
 
-΅	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(π‘μωÿÿÿÿ8εª§Άκ1J$6a867097-5e95-44b0-9b1f-e2a0f63cf0bc
-q
-java:S1948")Make "account" transient or serializable.(η¨€£ύÿÿÿÿ8ΟΫΐ±κ1J$91d3fc9a-c059-45db-abc3-5903e72ee339
+΅	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(π‘μωÿÿÿÿ8εª§Άκ1J$0d14d27b-e945-47f8-bc6b-030a2c01e9d8
+…
+java:S1128"cRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.AccountEntity'.(±¶“Ϊωÿÿÿÿ8°έ…²κ1

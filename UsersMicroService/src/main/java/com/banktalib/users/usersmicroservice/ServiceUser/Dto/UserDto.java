@@ -14,9 +14,11 @@ import java.io.Serializable;
 public class UserDto implements Serializable {
         private Long idUser;
         private String username;
+        private String firstname;
+        private String lastname;
         private String email;
         private String password;
         private Gender gender;
         private RoleUser role;
-        private AccountEntity account;
+        private AccountDto account;
 }
