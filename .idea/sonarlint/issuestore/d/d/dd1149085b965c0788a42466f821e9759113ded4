@@ -1,18 +1,14 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8£ÿÓˆç1J$455ba26f-6b4a-44c4-bcfc-3ac949ba5f6e
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8£ÿÓˆç1J$dfe5fb24-84f3-490d-a4be-9965e951779d
 ˜
-java:S36550"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿ8è±ê1J$25ede7c0-7a1c-425b-ad91-88e2a98d2523
+java:S36554"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿ8è±ê1J$fc39f339-f837-429b-99ad-787ec5b4f3d7
 “
-java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼Ôá8è±ê1J$79b31042-b304-45a8-a4dd-0be5cdebe3bb
+java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼Ôá8è±ê1J$a4fb0f47-55dc-4a2a-b035-4dd53b617382
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¥÷‘±ê1J$06afef24-3772-458e-81e8-db601d288f85
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¥÷‘±ê1J$0e5ce680-9355-4010-98a7-080899298ae9
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¦÷‘±ê1J$8da66120-fe8d-4449-b80a-df5fde35c8d5
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¦÷‘±ê1J$ae848cc4-10fb-48d5-b678-24a2037f993e
 `
-java:S2119""Save and re-use this "Random".(¼İÅf8«÷‘±ê1J$aea43fe9-53cb-493e-a86a-633e3f219dfc
+java:S2119""Save and re-use this "Random".(¼İÅf8«÷‘±ê1J$fb53c26e-e08e-427c-9701-c4ee2913d838
 š
-java:S6204,"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿ8ú±ê1J$253fc3ea-752b-47d2-b6c4-bf271b989b29
-¨
-java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿ8®÷‘±ê1J$f3e41fa4-b2e9-4523-b1bc-b60760088e59
-«
-java:S1128"hRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository'.(ï®Óò8®÷‘±ê1J$9cc75db4-b5b0-45af-b367-b654fd2fb275
+java:S62040"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿ8ú±ê1J$bf87cbb5-6452-4212-9718-d1759a4584ec

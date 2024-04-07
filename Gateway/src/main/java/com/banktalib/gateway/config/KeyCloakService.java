@@ -4,18 +4,17 @@ import com.banktalib.UserClient.UserClient;
 import com.banktalib.UserClient.UserDto;
 import com.banktalib.gateway.config.DTO.AuthenticationResponse;
 import com.banktalib.gateway.config.DTO.UserAuthenticationDto;
-import com.banktalib.gateway.config.Mapper.UserRepresentationMapper;
 
+import com.banktalib.gateway.config.Exeptions.UserAlreadyExistsException;
 import lombok.AllArgsConstructor;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
+import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UsersResource;
+import org.keycloak.representations.AccessTokenResponse;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -30,7 +29,12 @@ public class KeyCloakService {
 
     private UserClient userClient;
 
-    public UserDto addUser(UserDto userDTO){
+    public RealmResource getKeycloak() {
+        Keycloak instance = KeycloakConfig.getInstance();
+        return instance.realm(KeycloakConfig.realm);
+    }
+
+    public UserDto addUser(UserDto userDTO) {
         CredentialRepresentation credential = Credentials
                 .createPasswordCredentials(userDTO.getPassword());
         UserRepresentation user = new UserRepresentation();
@@ -41,39 +45,51 @@ public class KeyCloakService {
         user.setCredentials(Collections.singletonList(credential));
         user.setEnabled(true);
 
-        Keycloak instance = KeycloakConfig.getInstance();
-        UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
-        usersResource.create(user);
+        UsersResource usersResource = getKeycloak().users();
+        List<UserRepresentation> userRepresentations = usersResource.search("");
 
-        ;
+        boolean userExists = userRepresentations.stream().anyMatch(u ->
+                (u.getUsername() != null && u.getUsername().equals(userDTO.getUsername())) ||
+                        (u.getEmail() != null && u.getEmail().equals(userDTO.getEmail()))
+        );
 
-        return userClient.createUser(userDTO);
+        if (userExists) {
+            throw new UserAlreadyExistsException("User already exists");
+        } else {
+            usersResource.create(user);
+            return userClient.createUser(userDTO);
+        }
     }
 
-    public AuthenticationResponse authenticate(UserAuthenticationDto userDTO){
+    public AuthenticationResponse authenticate(UserAuthenticationDto userDTO) {
         Keycloak keycloak = KeycloakBuilder.builder()
-                    .serverUrl(KeycloakConfig.serverUrl)
-                    .realm(KeycloakConfig.realm)
-                    .grantType(OAuth2Constants.PASSWORD)
-                    .clientId(KeycloakConfig.clientId)
-                    .clientSecret(KeycloakConfig.clientSecret)
-                    .username(userDTO.getEmail())
-                    .password(userDTO.getPassword())
-                    .build();
+                .serverUrl(KeycloakConfig.serverUrl)
+                .realm(KeycloakConfig.realm)
+                .grantType(OAuth2Constants.PASSWORD)
+                .clientId(KeycloakConfig.clientId)
+                .clientSecret(KeycloakConfig.clientSecret)
+                .username(userDTO.getEmail())
+                .password(userDTO.getPassword())
+                .build();
+
+        AccessTokenResponse accesstoken = keycloak.tokenManager().getAccessToken();
+        AccessTokenResponse refreshToken = keycloak.tokenManager().refreshToken();
+
 
         return AuthenticationResponse.builder()
-                .accessToken(keycloak.tokenManager().getAccessToken())
-                .refreshToken(keycloak.tokenManager().refreshToken())
+                .accessToken(accesstoken)
+                .refreshToken(refreshToken)
                 .build();
+
     }
 
-    public List<UserRepresentation> getUser(String userName){
+    public List<UserRepresentation> getUser(String userName) {
         Keycloak instance = KeycloakConfig.getInstance();
         UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
         return usersResource.search(userName);
     }
 
-    public void updateUser(String userId, UserDto userDTO){
+    public void updateUser(String userId, UserDto userDTO) {
         UserRepresentation user = new UserRepresentation();
         user.setFirstName(userDTO.getFirstname());
         user.setLastName(userDTO.getLastname());
@@ -85,7 +101,7 @@ public class KeyCloakService {
         usersResource.get(userId).update(user);
     }
 
-    public void deleteUser(String userId){
+    public void deleteUser(String userId) {
         Keycloak instance = KeycloakConfig.getInstance();
         UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
         usersResource.get(userId).remove();

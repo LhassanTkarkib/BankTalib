@@ -28,6 +28,11 @@ public class AccountController {
         return new ResponseEntity<>(accountService.getAccount(accountId),HttpStatus.OK);
     }
 
+    @GetMapping("/getAccountByAccountNumber/{accountNumber}")
+    public ResponseEntity<AccountDto> getAccountByAccountNumber(@PathVariable String accountNumber){
+        return new ResponseEntity<>(accountService.getAccountByAccountNumber(accountNumber),HttpStatus.OK);
+    }
+
     @PostMapping("/createAccount")
     public ResponseEntity<AccountDto> createAccount(@RequestBody AccountDto accountDto){
         return new ResponseEntity<>(accountService.createAccount(accountDto),HttpStatus.CREATED);

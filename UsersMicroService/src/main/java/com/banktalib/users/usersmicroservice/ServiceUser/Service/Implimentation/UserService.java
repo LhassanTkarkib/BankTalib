@@ -1,6 +1,7 @@
 package com.banktalib.users.usersmicroservice.ServiceUser.Service.Implimentation;
 
 import com.banktalib.users.usersmicroservice.ServiceUser.Dto.UserDto;
+import com.banktalib.users.usersmicroservice.ServiceUser.Entity.AccountEntity;
 import com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity;
 import com.banktalib.users.usersmicroservice.ServiceUser.Mapper.UserMapper;
 import com.banktalib.users.usersmicroservice.ServiceUser.Repository.AccountRepository;
@@ -30,7 +31,11 @@ public class UserService implements IUserService {
     @Override
     public UserDto createUser(UserDto userDto) {
         UserEntity userEntity = userMapper.userDtoToUserEntity(userDto);
+        if(userEntity.getAccount() == null){
+            userEntity.setAccount(new AccountEntity());
+        }
         userEntity.getAccount().setAccountNumber(generateAccountNumber());
+        userEntity.getAccount().setBalance(0.0);
         UserEntity savedUserEntity = userRepository.save(userEntity);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }

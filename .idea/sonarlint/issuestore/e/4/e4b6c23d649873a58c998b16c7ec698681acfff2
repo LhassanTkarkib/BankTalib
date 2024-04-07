@@ -1,10 +1,10 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğ‘ìùÿÿÿÿ8Ü–ı†ç1J$1684f230-520f-4815-b46e-6c6217b1e989
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğ‘ìùÿÿÿÿ8Ü–ı†ç1J$157e8b28-b267-447a-9a9b-c6f9f99da1c2
 ¨
-java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿ8Ñú‘±ê1J$cadf7541-46cd-4a15-a9f4-52c1c7bcba0a
+java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿ8Ñú‘±ê1J$b9991f64-8642-4aa1-a4de-19e68cb3aa90
 
-java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonProperty'.(ËÃ§Ï8Òú‘±ê1J$75d2b4ec-92bd-48df-94a6-b379782e5bcf
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonProperty'.(ËÃ§Ï8Òú‘±ê1J$34286d2d-34d8-47f3-ac09-f9fc7cbf3de2
 ‹
-java:S1128"CRemove this unused import 'jakarta.validation.constraints.NotNull'.(Àª•ıÿÿÿÿ8æ–ı†ç1J$a8d77ee9-2794-489d-815c-c275e6156c69
+java:S1128"CRemove this unused import 'jakarta.validation.constraints.NotNull'.(Àª•ıÿÿÿÿ8æ–ı†ç1J$0fd93af9-607d-4900-bbd0-a43469cc323c
 m
-java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8æ–ı†ç1J$fbc0e14c-8b0b-48c3-872e-45b29070ccb2
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8æ–ı†ç1J$de94fe08-aeeb-4f6b-8286-aeb0bf8bc5fc

@@ -1,12 +1,2 @@
 
-~	java:S125"<This block of commented-out lines of code should be removed.(Ÿ“ÅĞ8¹à²ê1J$9e686acc-5fa1-492e-8f36-38bed014e022
->
-java:S11160"Remove this empty statement.(Åñ­õşÿÿÿÿ8ïÕå²ê1
-{
-java:S1128"YRemove this unused import 'com.banktalib.gateway.config.Mapper.UserRepresentationMapper'.(ÀÅŠşÿÿÿÿ8ıÕå²ê1
-u
-java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8ıÕå²ê1
-u
-java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Qualifier'.(íàÄ®ıÿÿÿÿ8ıÕå²ê1
-f
-java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8ıÕå²ê1
+~	java:S125"<This block of commented-out lines of code should be removed.(Ÿ“ÅĞ8Ò€ÏÈê1J$73109add-b079-49aa-94b8-265e4d7b7d7d
