@@ -1,3 +1,6 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8¯é¼³ë1J$b38c5a60-b2fe-4cc5-b98b-0a2fb32cec5c
-X	java:S125"<This block of commented-out lines of code should be removed.(Óî¹™8û‰Ù³ë1
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8Þ°¾´ë1J$c8a52d9f-c39f-4891-a259-1c6c5b10f96f
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8â°¾´ë1J$d3405fa1-fadf-401d-abee-ac23ed20e3f1
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8˜¦à´ë1J$ee10e0de-282a-4375-a60a-93f0e4e468d8

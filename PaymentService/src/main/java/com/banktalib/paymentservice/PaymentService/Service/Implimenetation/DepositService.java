@@ -1,36 +1,44 @@
 package com.banktalib.paymentservice.PaymentService.Service.Implimenetation;
 
+import com.banktalib.UserClient.AccountClient;
 import com.banktalib.UserClient.AccountDto;
 import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
+import com.banktalib.paymentservice.PaymentService.Repository.TransactionRepository;
+import com.banktalib.paymentservice.PaymentService.Service.IDepositService;
 import jakarta.ws.rs.NotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Service
-public class DepositService {
-    public void cashDeposit(String accountNumber, String pin, double amount) {
-//        AccountDto account = accountRepository.findByAccountNumber(accountNumber);
-        AccountDto account = accountRepository.findByAccountNumber(accountNumber);
+public class DepositService implements IDepositService {
+
+    @Autowired
+    private AccountClient accountClient;
+
+    @Autowired
+    private TransactionRepository transactionRepository;
+
+    public void cashDeposit(String accountNumber, double amount) {
+
+        AccountDto account = accountClient.getAccountByAccountNumber(accountNumber);
+
         if (account == null) {
             throw new NotFoundException("Account not found");
-        }
-
-        if (!passwordEncoder.matches(pin, account.getPin())) {
-            throw new UnauthorizedException("Invalid PIN");
         }
 
         double currentBalance = account.getBalance();
         double newBalance = currentBalance + amount;
         account.setBalance(newBalance);
-        accountRepository.save(account);
+        accountClient.updateAccount(account.getIdAccount(), account);
 
         TransactionEntity transaction = new TransactionEntity();
         transaction.setAmount(amount);
         transaction.setTypeTransaction(TransactionType.CASH_DEPOSIT);
         transaction.setDateTransaction(new Date());
-        transaction.setIdSenderAccount(account);
+        transaction.setIdSenderAccount(account.getIdAccount());
         transactionRepository.save(transaction);
     }
 }
