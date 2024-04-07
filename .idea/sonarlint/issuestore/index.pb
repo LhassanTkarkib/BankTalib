@@ -87,3 +87,7 @@ iPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Servic
 bPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Dto/AmountRequestDto.java,2\4\2400ad9c0fc3fa046a2dc2da6c553773b14eb768
 §
 wPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/Implimenetation/WithdrawalService.java,1\9\19488781d04f59a78656491222dafef07046fa27
+¨
+xPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/Implimenetation/IWithdrawalService.java,e\8\e872cc4bd556555aa096e6c9fb2343f26e721053
+˜
+hPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/IWithdrawalService.java,6\f\6f19bb2d464d21aea5fc34c9fe12549a0171f2bc

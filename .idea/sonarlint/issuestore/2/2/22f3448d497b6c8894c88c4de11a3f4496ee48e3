@@ -1,9 +1,16 @@
 
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú¦Íæûÿÿÿÿ8ŒäÚµë1J$a2df74b7-0bbd-4a94-8ab1-45931f3ed43a
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’­¥Ãûÿÿÿÿ8äÚµë1J$2d74ad7a-9846-45c9-8f0e-36556e5295e4
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú¦Íæûÿÿÿÿ8Ìèš¶ë1J$5bfb3dba-ef91-4647-ab93-5872e08c9e6e
+˜	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ßì­ûÿÿÿÿ8Ìèš¶ë1J$e8fba223-59ca-49dc-95fd-8a8f7fc8a6b0
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’­¥Ãûÿÿÿÿ8Îèš¶ë1J$9fad0e46-9a74-45bf-98a1-b84c60330458
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8“äÚµë1J$9e2d06cc-4bee-4b94-ac02-4a1876b1cd54
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Òèš¶ë1J$bd2d651e-32dc-495a-b41f-bc746c1c0edd
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Òèš¶ë1J$dbb5a568-3050-41f4-b7ac-27abbbfc89c2
 n
-java:S1452"&Remove usage of generic wildcard type.(Ú¦Íæûÿÿÿÿ8äÚµë1J$7b1c544a-3b7b-4952-841c-e4a43637470a
+java:S1452"&Remove usage of generic wildcard type.(Ú¦Íæûÿÿÿÿ8Üèš¶ë1J$a69709ee-1cca-4cfc-902d-65c0d5ecbbaa
 z
-java:S1135"2Complete the task associated to this TODO comment.(Ê‚“ûÿÿÿÿ8ŸäÚµë1J$33db5fe8-a038-49b4-911c-f9061e8802d7
+java:S1135"2Complete the task associated to this TODO comment.(Ê‚“ûÿÿÿÿ8İèš¶ë1J$a712a5f3-04dd-4f66-b949-e5a2edf9d330
+n
+java:S14523"&Remove usage of generic wildcard type.(“ßì­ûÿÿÿÿ8âèš¶ë1J$a3509a9b-c18f-4ed5-9246-d122f5e48c9c
+z
+java:S11350"2Complete the task associated to this TODO comment.(Ê‚“ûÿÿÿÿ8¤·›¶ë1J$7122ecc3-1a5b-4fab-af34-9c3f504eee8e
