@@ -9,15 +9,13 @@ import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/api/v1/transactions")
 public class PaymentController {
 
     @Autowired
@@ -26,8 +24,9 @@ public class PaymentController {
     @Autowired
     private IWithdrawalService withdrawalService;
 
-    @PostMapping("/deposit/{username}")
-    public ResponseEntity<?> cashDeposit(@RequestBody AmountRequestDto amountRequest,@PathVariable("username") String username) {
+    //TODO: SEND THE ACCOUNT NUMBER FROM THE FRONT END
+    @PostMapping("/deposit/{LoggedAccountNumber}")
+    public ResponseEntity<?> cashDeposit(@RequestBody AmountRequestDto amountRequest,@PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
 
         if (amountRequest.getAmount() <= 0) {
             Map<String, String> err = new HashMap<>();
@@ -35,7 +34,7 @@ public class PaymentController {
             return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
         }
 
-        depositService.cashDeposit(username,amountRequest.getAmount());
+        depositService.cashDeposit(LoggedAccountNumber,amountRequest.getAmount());
 
         Map<String, String> response = new HashMap<>();
         response.put("msg", "Cash deposited successfully");
@@ -47,13 +46,13 @@ public class PaymentController {
     //TODO: SEND THE ACCOUNT NUMBER FROM THE FRONT END
 
     @PostMapping("/withdraw/{LoggedAccountNumber}")
-    public ResponseEntity<?> cashWithdrawal(@RequestBody AmountRequestDto amountRequest,@PathVariable("username") String username) {
+    public ResponseEntity<?> cashWithdrawal(@RequestBody AmountRequestDto amountRequest,@PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
         if (amountRequest.getAmount() <= 0) {
             Map<String, String> err = new HashMap<>();
             err.put("Error", "Invalid amount");
             return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
         }
-        withdrawalService.cashWithdrawal(username,
+        withdrawalService.cashWithdrawal(LoggedAccountNumber,
                 amountRequest.getAmount());
 
         Map<String, String> response = new HashMap<>();

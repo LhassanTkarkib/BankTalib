@@ -41,6 +41,8 @@ public class KeyCloakService {
         user.setEmail(userDTO.getEmail());
         user.setCredentials(Collections.singletonList(credential));
         user.setEnabled(true);
+        UserDto databsaeUser = userClient.createUser(userDTO);
+        user.setAttributes(Collections.singletonMap("accountNumber", Collections.singletonList(databsaeUser.getAccount().getAccountNumber())));
 
         UsersResource usersResource = getKeycloak().users();
         List<UserRepresentation> userRepresentations = usersResource.search("");
@@ -54,7 +56,7 @@ public class KeyCloakService {
             throw new UserAlreadyExistsException("User already exists");
         } else {
             usersResource.create(user);
-            return userClient.createUser(userDTO);
+            return databsaeUser;
         }
     }
 
