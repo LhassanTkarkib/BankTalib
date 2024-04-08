@@ -31,11 +31,12 @@ public class UserService implements IUserService {
     @Override
     public UserDto createUser(UserDto userDto) {
         UserEntity userEntity = userMapper.userDtoToUserEntity(userDto);
-        if(userEntity.getAccount() == null){
+        if (userEntity.getAccount() == null) {
             userEntity.setAccount(new AccountEntity());
         }
         userEntity.getAccount().setAccountNumber(generateAccountNumber());
         userEntity.getAccount().setBalance(0.0);
+        userEntity.setUsername(userEntity.getUsername().toLowerCase());
         UserEntity savedUserEntity = userRepository.save(userEntity);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }
@@ -66,9 +67,23 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public UserDto getUserByUserName(String username) {
+        UserEntity User = userRepository.findUserByUsername(username);
+        return userMapper.userEntityToUserDto(User);
+    }
+
+    @Override
     public UserDto updateUser(long id, UserDto userDTO) {
         UserEntity existingUser = userRepository.findById(id).get();
         UserEntity updatedUser = userMapper.partialUpdate(userDTO, existingUser);
+        UserEntity savedUserEntity = userRepository.save(updatedUser);
+        return userMapper.userEntityToUserDto(savedUserEntity);
+    }
+
+    @Override
+    public UserDto updateUser(String username, UserDto userDto) {
+        UserEntity existingUser = userRepository.findUserByUsername(username);
+        UserEntity updatedUser = userMapper.partialUpdate(userDto, existingUser);
         UserEntity savedUserEntity = userRepository.save(updatedUser);
         return userMapper.userEntityToUserDto(savedUserEntity);
     }

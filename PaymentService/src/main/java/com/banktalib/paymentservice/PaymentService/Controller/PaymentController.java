@@ -26,9 +26,8 @@ public class PaymentController {
     @Autowired
     private IWithdrawalService withdrawalService;
 
-    //TODO: SEND THE ACCOUNT NUMBER FROM THE FRONT END
-    @PostMapping("/deposit/{LoggedAccountNumber}")
-    public ResponseEntity<?> cashDeposit(@RequestBody AmountRequestDto amountRequest,@PathVariable String LoggedAccountNumber) {
+    @PostMapping("/deposit/{username}")
+    public ResponseEntity<?> cashDeposit(@RequestBody AmountRequestDto amountRequest,@PathVariable("username") String username) {
 
         if (amountRequest.getAmount() <= 0) {
             Map<String, String> err = new HashMap<>();
@@ -36,7 +35,7 @@ public class PaymentController {
             return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
         }
 
-        depositService.cashDeposit(LoggedAccountNumber,amountRequest.getAmount());
+        depositService.cashDeposit(username,amountRequest.getAmount());
 
         Map<String, String> response = new HashMap<>();
         response.put("msg", "Cash deposited successfully");
@@ -48,13 +47,13 @@ public class PaymentController {
     //TODO: SEND THE ACCOUNT NUMBER FROM THE FRONT END
 
     @PostMapping("/withdraw/{LoggedAccountNumber}")
-    public ResponseEntity<?> cashWithdrawal(@RequestBody AmountRequestDto amountRequest,@PathVariable String LoggedAccountNumber) {
+    public ResponseEntity<?> cashWithdrawal(@RequestBody AmountRequestDto amountRequest,@PathVariable("username") String username) {
         if (amountRequest.getAmount() <= 0) {
             Map<String, String> err = new HashMap<>();
             err.put("Error", "Invalid amount");
             return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
         }
-        withdrawalService.cashWithdrawal(LoggedAccountNumber,
+        withdrawalService.cashWithdrawal(username,
                 amountRequest.getAmount());
 
         Map<String, String> response = new HashMap<>();

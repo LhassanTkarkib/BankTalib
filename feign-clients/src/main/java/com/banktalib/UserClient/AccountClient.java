@@ -1,6 +1,7 @@
 package com.banktalib.UserClient;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,8 +18,13 @@ public interface AccountClient {
     @GetMapping("/api/v1/accounts")
     List<AccountDto> getAllAccounts();
 
+    @GetMapping("/getAccountByUserName/{username}")
+     AccountDto getAccountByUsername(@PathVariable String username);
+
     @PostMapping("/api/v1/accounts/createAccount")
     AccountDto createAccount(@RequestBody AccountDto accountDto);
+
+
 
     @PutMapping("/api/v1/accounts/updateAccount/{accountId}")
     AccountDto updateAccount(@PathVariable Long accountId, @RequestBody AccountDto accountDto);

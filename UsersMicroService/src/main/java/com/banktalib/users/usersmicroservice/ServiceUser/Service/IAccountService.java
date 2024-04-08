@@ -16,4 +16,7 @@ public interface IAccountService {
     AccountDto updateAccount(Long accountId, AccountDto accountDto);
 
     void deleteAccount(Long accountId);
+
+
+    AccountDto getAccountByUserName(String username);
 }

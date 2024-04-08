@@ -91,3 +91,9 @@ wPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Servic
 xPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/Implimenetation/IWithdrawalService.java,e\8\e872cc4bd556555aa096e6c9fb2343f26e721053
 ˜
 hPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/IWithdrawalService.java,6\f\6f19bb2d464d21aea5fc34c9fe12549a0171f2bc
+‡
+WGateway/src/main/java/com/banktalib/gateway/config/Mapper/UserRepresentationMapper.java,1\8\183b20932d0bf44a14e3c777e82d96a40cf9c017
+}
+MGateway/src/main/java/com/banktalib/gateway/config/KeycloakRoleConverter.java,1\d\1d62fb8ae280f81e1b924f53b4ab10a27082f998
+v
+FGateway/src/main/java/com/banktalib/gateway/config/SecurityConfig.java,c\a\ca28d8e21a8fbeb9aff68d4f8b1268c5ccd37f80

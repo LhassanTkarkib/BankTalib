@@ -33,6 +33,11 @@ public class AccountController {
         return new ResponseEntity<>(accountService.getAccountByAccountNumber(accountNumber),HttpStatus.OK);
     }
 
+    @GetMapping("/getAccountByUserName/{username}")
+    public ResponseEntity<AccountDto> getAccountByUsername(@PathVariable String username){
+        return new ResponseEntity<>(accountService.getAccountByUserName(username),HttpStatus.OK);
+    }
+
     @PostMapping("/createAccount")
     public ResponseEntity<AccountDto> createAccount(@RequestBody AccountDto accountDto){
         return new ResponseEntity<>(accountService.createAccount(accountDto),HttpStatus.CREATED);
@@ -48,4 +53,6 @@ public class AccountController {
         accountService.deleteAccount(accountId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+
 }

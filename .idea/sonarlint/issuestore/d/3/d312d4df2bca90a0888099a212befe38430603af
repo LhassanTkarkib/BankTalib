@@ -1,6 +1,2 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(úà±´ûÿÿÿÿJ$13891649-61d4-4f90-9601-e05b5a1535f6
-|	java:S125"<This block of commented-out lines of code should be removed.(ªë«ÉÿÿÿÿÿJ$b7b88e1a-1c51-4322-b139-94b2bbad9150
-w	java:S125"<This block of commented-out lines of code should be removed.(†õÁëJ$bbf38532-22b5-4bba-8f04-a4f7482e6d07
-…
-java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿJ$e8dc7c94-745f-4f7c-98f1-ca0dab28eb32
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(úà±´ûÿÿÿÿ8•²ŸÜë1J$d5754662-d531-4595-9dcb-69a36ba041a1

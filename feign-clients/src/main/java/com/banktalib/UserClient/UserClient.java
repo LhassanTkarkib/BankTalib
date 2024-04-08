@@ -1,24 +1,31 @@
 package com.banktalib.UserClient;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "userClient", url = "http://localhost:5050")
+import java.util.List;
+
+@FeignClient(name = "userClient", url = "http://localhost:5050/api/v1/users")
 public interface UserClient {
 
-    @PostMapping(value = "/api/v1/users/createUser")
-    UserDto createUser(@RequestBody UserDto user);
+    @PostMapping("/createUser")
+    UserDto createUser(@RequestBody UserDto userDto);
 
-//    @GetMapping("/api/v1/users")
-//    ResponseEntity<List<UserDto>> getAllUsers();
+    @GetMapping("/getUserById/{userId}")
+    UserDto getUserById(@PathVariable Long userId);
 
-//    @GetMapping("/api/v1/users/getUserById/{userId}")
-//    ResponseEntity<UserDto> getUserById(@PathVariable Long id);
-//
-//    @PutMapping("/api/v1/users/update/{userId}")
-//    ResponseEntity<UserDto> updateUser(@PathVariable Long id, @RequestBody @Valid UserDto user);
-//
-//    @DeleteMapping("/api/v1/users/delete/{userId}")
-//    ResponseEntity<Void> deleteUser(@PathVariable Long id);
+    @GetMapping("/getUserByUserName/{userName}")
+    UserDto getUserByUserName(@PathVariable String userName);
+
+    @GetMapping
+    List<UserDto> getAllUsers();
+
+    @PutMapping("/update/{userId}")
+    UserDto updateUser(@PathVariable Long userId, @RequestBody UserDto userDTO);
+
+    @PutMapping("/update/byUserName/{userName}")
+    UserDto updateUserByUserName(@PathVariable String userName, @RequestBody UserDto userDTO);
+
+    @DeleteMapping("/delete/{userId}")
+    void deleteUser(@PathVariable Long userId);
 }

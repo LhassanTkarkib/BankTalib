@@ -18,12 +18,13 @@ public class DepositService implements IDepositService {
     @Autowired
     private AccountClient accountClient;
 
+
     @Autowired
     private TransactionRepository transactionRepository;
 
-    public void cashDeposit(String accountNumber, double amount) {
+    public void cashDeposit(String username, double amount) {
 
-        AccountDto account = accountClient.getAccountByAccountNumber(accountNumber);
+        AccountDto account = accountClient.getAccountByUsername(username);
 
         if (account == null) {
             throw new NotFoundException("Account not found");

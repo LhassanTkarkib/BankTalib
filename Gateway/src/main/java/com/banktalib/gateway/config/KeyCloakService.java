@@ -24,9 +24,6 @@ import java.util.List;
 @AllArgsConstructor
 public class KeyCloakService {
 
-//    @Autowired
-//    private UserRepresentationMapper userRepresentationMapper;
-
     private UserClient userClient;
 
     public RealmResource getKeycloak() {
@@ -88,17 +85,32 @@ public class KeyCloakService {
         UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
         return usersResource.search(userName);
     }
+    public UserDto updateUser(String username, UserDto userDTO) {
+        try {
 
-    public void updateUser(String userId, UserDto userDTO) {
         UserRepresentation user = new UserRepresentation();
         user.setFirstName(userDTO.getFirstname());
         user.setLastName(userDTO.getLastname());
         user.setEmail(userDTO.getEmail());
         user.setEnabled(true);
 
+        CredentialRepresentation credentials = new CredentialRepresentation();
+        credentials.setType(CredentialRepresentation.PASSWORD);
+        credentials.setValue(userDTO.getPassword());
+        credentials.setTemporary(false);
+        user.setCredentials(Collections.singletonList(credentials));
+
         Keycloak instance = KeycloakConfig.getInstance();
         UsersResource usersResource = instance.realm(KeycloakConfig.realm).users();
+        String userId = usersResource.search(username).get(0).getId();
         usersResource.get(userId).update(user);
+
+            return userClient.updateUserByUserName(username, userDTO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     public void deleteUser(String userId) {

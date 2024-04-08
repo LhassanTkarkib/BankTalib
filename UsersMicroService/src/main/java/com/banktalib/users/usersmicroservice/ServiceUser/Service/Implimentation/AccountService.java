@@ -44,6 +44,10 @@ public class AccountService implements IAccountService {
         return accountMapper.toDto(accountRepository.findByAccountNumber(accountNumber));
     }
 
+    public AccountDto getAccountByUserName(String username) {
+        return accountMapper.toDto(accountRepository.findByUserUsername(username));
+    }
+
     public List<AccountDto> getAllAccounts() {
         return accountRepository.findAll().stream().map(accountMapper::toDto).collect(Collectors.toList());
     }

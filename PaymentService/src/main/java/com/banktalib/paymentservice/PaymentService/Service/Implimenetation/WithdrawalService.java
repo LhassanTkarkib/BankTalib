@@ -22,9 +22,9 @@ public class WithdrawalService implements IWithdrawalService {
     private TransactionRepository transactionRepository;
 
     @Override
-    public void cashWithdrawal(String accountNumber, double amount) {
+    public void cashWithdrawal(String username, double amount) {
 
-        AccountDto account = accountClient.getAccountByAccountNumber(accountNumber);
+        AccountDto account = accountClient.getAccountByUsername(username);
         if (account == null) {
             throw new NotFoundException("Account not found");
         }

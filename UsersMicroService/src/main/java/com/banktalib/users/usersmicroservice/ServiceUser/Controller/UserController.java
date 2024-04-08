@@ -31,6 +31,11 @@ public class UserController {
         return new ResponseEntity<>(userService.getUser(userId), HttpStatus.OK);
     }
 
+    @GetMapping("/getUserByUserName/{userName}")
+    public ResponseEntity<UserDto> getUserByUserName(@PathVariable String userName) {
+        return new ResponseEntity<>(userService.getUserByUserName(userName), HttpStatus.OK);
+    }
+
     @GetMapping
     public ResponseEntity<List<UserDto>> getAllUsers() {
         return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
@@ -39,6 +44,11 @@ public class UserController {
     @PutMapping("/update/{userId}")
     public ResponseEntity<UserDto> updateUser(@PathVariable Long userId, @RequestBody UserDto userDTO) {
         return new ResponseEntity<>(userService.updateUser(userId,userDTO), HttpStatus.OK);
+    }
+
+    @PutMapping("/update/byUserName/{userName}")
+    public ResponseEntity<UserDto> updateUserByUserName(@PathVariable String userName, @RequestBody UserDto userDTO) {
+        return new ResponseEntity<>(userService.updateUser(userName,userDTO), HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{userId}")

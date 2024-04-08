@@ -1,16 +1,17 @@
 
-E
-java:S5411/"(Use a primitive boolean expression here.(‰Ü„8™¯Ä³ê1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8›¯Ä³ê1
-m
-java:S3655F"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8®¯Ä³ê1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8°¯Ä³ê1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8°¯Ä³ê1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8°¯Ä³ê1
-:
-java:S2119-"Save and re-use this "Random".(¼İÅf8¹¯Ä³ê1
-o
-java:S62048"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8»¯Ä³ê1
+“	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8ê••Üë1J$b3a25865-2ab0-403e-9bc8-10d91c6df0a9
+k
+java:S54110"(Use a primitive boolean expression here.(‰Ü„8ë••Üë1J$ba43a24f-3052-4f55-9036-50ffb5b3db78
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8î••Üë1J$a69a8041-a14e-461c-9cbf-a01a4e5d6be0
+“
+java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8ü••Üë1J$f4f65862-e671-49f5-88a2-83d3936b57a8
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ş••Üë1J$0a56774e-52fd-4409-b0bf-7ac793af0f86
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÿ••Üë1J$9702e7c7-a64a-4c11-b822-792554aa0c66
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÿ••Üë1J$01c23d47-d98b-4a73-a552-2bad0001bd2f
+`
+java:S2119."Save and re-use this "Random".(¼İÅf8ˆ–•Üë1J$679ea3e7-dc5e-4e60-9f61-4614c4ea7e11
+•
+java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8‹–•Üë1J$a4351265-760a-4a19-ac29-3f1dcff7d8cf
