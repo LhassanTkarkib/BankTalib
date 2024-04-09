@@ -1,12 +1,12 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿJ$238c3100-d239-45ba-b0f9-55202c0e4673
-Œ
-java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ìò’ÇJ$5cc43344-2375-45d4-865e-0299dfa7cb3e
-‹
-java:S3655,"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ë»Õ>J$7f971d63-5265-4cea-9b6d-9c02bf6f7ff8
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$cbf9301b-9039-4cba-9f25-a433d1a7e502
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$5104dfb0-be6a-48f4-9ae0-35ec2824c94c
-Ž
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(è…ÙJ$8c3d4996-f31d-402b-813c-78951106d1df
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8‹¤ñ›ì1J$14206a60-0fe1-4efd-8eab-b22b83a1500e
+’
+java:S3655'"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ë»Õ>8¡¤ñ›ì1J$bc7387e7-25d3-47f9-9a73-cb3ca32d343a
+“
+java:S3655!"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ìò’Ç8¡¤ñ›ì1J$e3538a93-29a0-4840-9d6b-f8b854e337db
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¤¤ñ›ì1J$c8e05169-87dc-41f9-9b80-96670ed2d78f
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¤¤ñ›ì1J$a4b5a19c-1bd7-4dd6-a021-8409eed4a19c
+•
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(µÙï½8¯¤ñ›ì1J$c9696243-7b6b-4abc-9702-3b9a9281052d

@@ -11,6 +11,7 @@ import com.banktalib.paymentservice.PaymentService.Service.ITransferService;
 import jakarta.ws.rs.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -26,7 +27,9 @@ public class TransferService implements ITransferService {
     @Autowired
     private TransactionMapper transactionMapper;
 
-    public TransactionDto fundTransfer(String sourceAccountNumber, String targetAccountNumber , double amount) {
+    @Override
+    @Transactional
+    public TransactionDto fundTransfer(String sourceAccountNumber, String targetAccountNumber, double amount) {
         AccountDto sourceAccount = accountClient.getAccountByAccountNumber(sourceAccountNumber);
         if (sourceAccount == null) {
             throw new NotFoundException("Source account not found");
@@ -44,19 +47,19 @@ public class TransferService implements ITransferService {
 
         double newSourceBalance = sourceBalance - amount;
         sourceAccount.setBalance(newSourceBalance);
-        accountClient.updateAccount(sourceAccount.getIdAccount(),sourceAccount);
+        accountClient.updateAccount(sourceAccount.getIdAccount(), sourceAccount);
 
         double targetBalance = targetAccount.getBalance();
         double newTargetBalance = targetBalance + amount;
         targetAccount.setBalance(newTargetBalance);
-        accountClient.updateAccount(targetAccount.getIdAccount(),targetAccount);
+        accountClient.updateAccount(targetAccount.getIdAccount(), targetAccount);
 
         TransactionEntity transaction = new TransactionEntity();
         transaction.setAmount(amount);
         transaction.setTypeTransaction(TransactionType.CASH_TRANSFER);
         transaction.setDateTransaction(new Date());
-        transaction.setIdSenderAccount(sourceAccount.getIdAccount());
-        transaction.setIdReceiverAccount(targetAccount.getIdAccount());
+        transaction.setSenderAccountNumber(sourceAccount.getAccountNumber());
+        transaction.setReceiverAccountNumber(targetAccount.getAccountNumber());
         TransactionDto transactiondto = transactionMapper.toDto(transactionRepository.save(transaction));
         return transactiondto;
     }

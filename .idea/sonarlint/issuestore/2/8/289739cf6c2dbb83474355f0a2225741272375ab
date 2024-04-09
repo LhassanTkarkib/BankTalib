@@ -1,17 +1,17 @@
 
-“	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8ê••Üë1J$b3a25865-2ab0-403e-9bc8-10d91c6df0a9
+“	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8ê••Üë1J$987bbe03-ee9d-4978-a8f3-bda6f599b898
 k
-java:S54110"(Use a primitive boolean expression here.(‰Ü„8ë••Üë1J$ba43a24f-3052-4f55-9036-50ffb5b3db78
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8î••Üë1J$a69a8041-a14e-461c-9cbf-a01a4e5d6be0
+java:S54110"(Use a primitive boolean expression here.(‰Ü„8ë••Üë1J$7531966d-bf3b-4ffa-8c8c-4c31cd63fe05
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8î••Üë1J$1ea5b9bf-1ca5-4bcf-9454-3c49a7a0b661
 “
-java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8ü••Üë1J$f4f65862-e671-49f5-88a2-83d3936b57a8
+java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8ü••Üë1J$0651ffe1-51bf-417c-9e54-876d769736ed
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ş••Üë1J$0a56774e-52fd-4409-b0bf-7ac793af0f86
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ş••Üë1J$ec90facd-ce86-4d6f-bbe4-6c530b4ccc0b
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÿ••Üë1J$9702e7c7-a64a-4c11-b822-792554aa0c66
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÿ••Üë1J$84386e95-cf81-47f4-a27a-090af27540f2
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÿ••Üë1J$01c23d47-d98b-4a73-a552-2bad0001bd2f
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÿ••Üë1J$33110f3c-5395-4b98-8d79-c429f8cd51f8
 `
-java:S2119."Save and re-use this "Random".(¼İÅf8ˆ–•Üë1J$679ea3e7-dc5e-4e60-9f61-4614c4ea7e11
+java:S2119."Save and re-use this "Random".(¼İÅf8ˆ–•Üë1J$fb47363e-ffd2-4f3f-9cd2-85b994ab7bee
 •
-java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8‹–•Üë1J$a4351265-760a-4a19-ac29-3f1dcff7d8cf
+java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8‹–•Üë1J$48fe4fa1-b209-4aa6-a0b3-8fff5faadc26

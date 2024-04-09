@@ -9,6 +9,7 @@ import com.banktalib.paymentservice.PaymentService.Service.IWithdrawalService;
 import jakarta.ws.rs.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -22,6 +23,7 @@ public class WithdrawalService implements IWithdrawalService {
     private TransactionRepository transactionRepository;
 
     @Override
+    @Transactional
     public void cashWithdrawal(String accountNumber, double amount) {
 
         AccountDto account = accountClient.getAccountByAccountNumber(accountNumber);
@@ -43,7 +45,7 @@ public class WithdrawalService implements IWithdrawalService {
         transaction.setAmount(amount);
         transaction.setTypeTransaction(TransactionType.CASH_WITHDRAWAL);
         transaction.setDateTransaction(new Date());
-        transaction.setIdSenderAccount(account.getIdAccount());
+        transaction.setSenderAccountNumber(account.getAccountNumber());
         transactionRepository.save(transaction);
     }
 

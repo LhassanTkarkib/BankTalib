@@ -6,11 +6,10 @@ import java.util.List;
 
 public interface ITransactionService {
 
-    List<TransactionDto> getAllTransactions();
+    List<TransactionDto> getAllTransactionsByAccountNumber(String accountNumber);
 
     TransactionDto getTransaction(Long id);
 
-    TransactionDto createTransaction(TransactionDto transactionDto);
 
     TransactionDto updateTransaction(long id, TransactionDto transactionDto);
 

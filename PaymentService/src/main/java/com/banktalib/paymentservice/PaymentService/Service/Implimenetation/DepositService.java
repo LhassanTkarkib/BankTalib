@@ -9,6 +9,7 @@ import com.banktalib.paymentservice.PaymentService.Service.IDepositService;
 import jakarta.ws.rs.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -21,6 +22,8 @@ public class DepositService implements IDepositService {
     @Autowired
     private TransactionRepository transactionRepository;
 
+    @Override
+    @Transactional
     public void cashDeposit(String accountNumber, double amount) {
         AccountDto account = accountClient.getAccountByAccountNumber(accountNumber);
 
@@ -37,7 +40,7 @@ public class DepositService implements IDepositService {
         transaction.setAmount(amount);
         transaction.setTypeTransaction(TransactionType.CASH_DEPOSIT);
         transaction.setDateTransaction(new Date());
-        transaction.setIdSenderAccount(account.getIdAccount());
+        transaction.setSenderAccountNumber(account.getAccountNumber());
         transactionRepository.save(transaction);
     }
 }
