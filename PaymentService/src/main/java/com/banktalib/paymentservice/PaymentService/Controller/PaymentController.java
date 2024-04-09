@@ -1,8 +1,10 @@
 package com.banktalib.paymentservice.PaymentService.Controller;
 
 import com.banktalib.paymentservice.PaymentService.Dto.AmountRequestDto;
+import com.banktalib.paymentservice.PaymentService.Dto.TransferDto;
 import com.banktalib.paymentservice.PaymentService.Service.IDepositService;
 import com.banktalib.paymentservice.PaymentService.Service.ITransactionService;
+import com.banktalib.paymentservice.PaymentService.Service.ITransferService;
 import com.banktalib.paymentservice.PaymentService.Service.IWithdrawalService;
 import com.banktalib.paymentservice.PaymentService.Service.Implimenetation.DepositService;
 import com.netflix.discovery.converters.Auto;
@@ -24,9 +26,11 @@ public class PaymentController {
     @Autowired
     private IWithdrawalService withdrawalService;
 
-    //TODO: SEND THE ACCOUNT NUMBER FROM THE FRONT END
+    @Autowired
+    private ITransferService transferService;
+
     @PostMapping("/deposit/{LoggedAccountNumber}")
-    public ResponseEntity<?> cashDeposit(@RequestBody AmountRequestDto amountRequest,@PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
+    public ResponseEntity<?> cashDeposit(@RequestBody AmountRequestDto amountRequest, @PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
 
         if (amountRequest.getAmount() <= 0) {
             Map<String, String> err = new HashMap<>();
@@ -34,7 +38,7 @@ public class PaymentController {
             return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
         }
 
-        depositService.cashDeposit(LoggedAccountNumber,amountRequest.getAmount());
+        depositService.cashDeposit(LoggedAccountNumber, amountRequest.getAmount());
 
         Map<String, String> response = new HashMap<>();
         response.put("msg", "Cash deposited successfully");
@@ -43,10 +47,8 @@ public class PaymentController {
 
     }
 
-    //TODO: SEND THE ACCOUNT NUMBER FROM THE FRONT END
-
     @PostMapping("/withdraw/{LoggedAccountNumber}")
-    public ResponseEntity<?> cashWithdrawal(@RequestBody AmountRequestDto amountRequest,@PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
+    public ResponseEntity<?> cashWithdrawal(@RequestBody AmountRequestDto amountRequest, @PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
         if (amountRequest.getAmount() <= 0) {
             Map<String, String> err = new HashMap<>();
             err.put("Error", "Invalid amount");
@@ -57,6 +59,22 @@ public class PaymentController {
 
         Map<String, String> response = new HashMap<>();
         response.put("msg", "Cash withdrawn successfully");
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @PostMapping("/transfer/{LoggedAccountNumber}")
+    public ResponseEntity<?> fundTransfer(@RequestBody TransferDto TransferRequest, @PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
+        if (TransferRequest.getAmount() <= 0) {
+            Map<String, String> err = new HashMap<>();
+            err.put("Error", "Invalid amount");
+            return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
+        }
+
+        transferService.fundTransfer(LoggedAccountNumber, TransferRequest.getTargetAccountNumber()
+                , TransferRequest.getAmount());
+        Map<String, String> response = new HashMap<>();
+        response.put("msg", "Fund transferred successfully");
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

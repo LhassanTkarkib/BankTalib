@@ -24,10 +24,10 @@ public interface AccountClient {
     @PostMapping("/api/v1/accounts/createAccount")
     AccountDto createAccount(@RequestBody AccountDto accountDto);
 
-
-
     @PutMapping("/api/v1/accounts/updateAccount/{accountId}")
     AccountDto updateAccount(@PathVariable Long accountId, @RequestBody AccountDto accountDto);
+
+
 
     @DeleteMapping("/api/v1/accounts/deleteAccount/{accountId}")
     void deleteAccount(@PathVariable Long accountId);

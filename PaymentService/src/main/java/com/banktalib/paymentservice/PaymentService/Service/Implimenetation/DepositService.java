@@ -22,7 +22,6 @@ public class DepositService implements IDepositService {
     private TransactionRepository transactionRepository;
 
     public void cashDeposit(String accountNumber, double amount) {
-
         AccountDto account = accountClient.getAccountByAccountNumber(accountNumber);
 
         if (account == null) {
