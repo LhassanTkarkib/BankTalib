@@ -1,0 +1,8 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ô¡ê€üÿÿÿÿJ$1c8a2203-b783-48b0-9fcb-64864a2476b9
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$e1cfd91f-dad0-4663-b555-f16aca1fd62f
+‘
+java:S1128"tRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Service.Implimentation.AccountService'.(ÑžÈ€8þ†§ßë1
+x
+java:S1128"VRemove this unused import 'org.mapstruct.ap.shaded.freemarker.core.ReturnInstruction'.(âëž¤ÿÿÿÿÿ8þ†§ßë1

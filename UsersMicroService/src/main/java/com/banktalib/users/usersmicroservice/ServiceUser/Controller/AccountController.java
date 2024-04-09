@@ -23,9 +23,19 @@ public class AccountController {
         return new ResponseEntity<>( accountService.getAllAccounts(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{accountId}")
     public ResponseEntity<AccountDto> getAccountById(@PathVariable Long accountId){
         return new ResponseEntity<>(accountService.getAccount(accountId),HttpStatus.OK);
+    }
+
+    @GetMapping("/getAccountByAccountNumber/{accountNumber}")
+    public ResponseEntity<AccountDto> getAccountByAccountNumber(@PathVariable String accountNumber){
+        return new ResponseEntity<>(accountService.getAccountByAccountNumber(accountNumber),HttpStatus.OK);
+    }
+
+    @GetMapping("/getAccountByUserName/{username}")
+    public ResponseEntity<AccountDto> getAccountByUsername(@PathVariable String username){
+        return new ResponseEntity<>(accountService.getAccountByUserName(username),HttpStatus.OK);
     }
 
     @PostMapping("/createAccount")
@@ -33,14 +43,16 @@ public class AccountController {
         return new ResponseEntity<>(accountService.createAccount(accountDto),HttpStatus.CREATED);
     }
 
-    @PutMapping("/updateAccount/{id}")
+    @PutMapping("/updateAccount/{accountId}")
     public ResponseEntity<AccountDto> updateAccount(@PathVariable Long accountId, @RequestBody AccountDto accountDto){
         return new ResponseEntity<>(accountService.updateAccount(accountId, accountDto),HttpStatus.OK);
     }
 
-    @DeleteMapping("/deleteAccount/{id}")
+    @DeleteMapping("/deleteAccount/{accountId}")
     public ResponseEntity<Void> deleteAccount(@PathVariable Long accountId){
         accountService.deleteAccount(accountId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+
 }

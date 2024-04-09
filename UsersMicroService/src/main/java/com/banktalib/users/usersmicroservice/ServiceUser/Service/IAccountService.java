@@ -9,9 +9,14 @@ public interface IAccountService {
 
     AccountDto getAccount(Long accountId);
 
+    AccountDto getAccountByAccountNumber(String accountNumber);
+
     List<AccountDto> getAllAccounts();
 
     AccountDto updateAccount(Long accountId, AccountDto accountDto);
 
     void deleteAccount(Long accountId);
+
+
+    AccountDto getAccountByUserName(String username);
 }

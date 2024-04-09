@@ -27,6 +27,12 @@ public class UserEntity {
     @Column(name = "username")
     private String username;
 
+    @Column(name = "firstname")
+    private String firstname;
+
+    @Column(name = "lastname")
+    private String lastname;
+
     @Column(name = "email")
     private String email;
 
@@ -41,5 +47,8 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private RoleUser role;
 
+    @OneToOne(cascade=CascadeType.PERSIST)
+    @JoinColumn(name = "idAccount", referencedColumnName = "idAccount")
+    private AccountEntity account;
 
 }

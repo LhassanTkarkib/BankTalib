@@ -1,5 +1,6 @@
 package com.banktalib.paymentservice.PaymentService.Dto;
 
+import com.banktalib.UserClient.AccountDto;
 import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,6 @@ public class TransactionDto implements Serializable {
     private Double amount;
     private Date dateTransaction;
     private TransactionType typeTransaction;
-    private Long idSenderAccount;
-    private Long idReceiverAccount;
+    private String senderAccountNumber;
+    private String receiverAccountNumber;
 }

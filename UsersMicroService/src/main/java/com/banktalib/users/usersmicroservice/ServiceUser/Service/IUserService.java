@@ -9,11 +9,16 @@ public interface IUserService {
 
     UserDto getUser(Long id);
 
-    UserDto updateUser(long id,UserDto userDTO);
+
+    UserDto updateUser(long id, UserDto userDTO);
+
+    UserDto updateUser(String username, UserDto userDto);
 
     void deleteUser(Long id);
 
     List<UserDto> getAllUsers();
+
+    UserDto getUserByUserName(String userName);
 
 //    List<UserDto> getAllUsersByRole(RoleUser role);
 }

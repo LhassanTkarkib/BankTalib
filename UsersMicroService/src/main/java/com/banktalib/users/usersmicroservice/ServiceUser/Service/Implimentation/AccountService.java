@@ -7,10 +7,12 @@ import com.banktalib.users.usersmicroservice.ServiceUser.Mapper.AccountMapper;
 import com.banktalib.users.usersmicroservice.ServiceUser.Repository.AccountRepository;
 import com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository;
 import com.banktalib.users.usersmicroservice.ServiceUser.Service.IAccountService;
+import jakarta.persistence.PrePersist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,21 +20,32 @@ public class AccountService implements IAccountService {
 
     @Autowired
     private AccountRepository accountRepository;
-    @Autowired
-    private UserRepository userRepository;
 
     @Autowired
     private AccountMapper accountMapper;
 
     public AccountDto createAccount(AccountDto account){
-        UserEntity userAcc=userRepository.findById(account.getIdUser()).get();
         AccountEntity savedAccount = accountMapper.toEntity(account);
-        savedAccount.setUser(userAcc);
+        savedAccount.setAccountNumber(generateAccountNumber());
         return accountMapper.toDto(accountRepository.save(savedAccount));
+    }
+    @PrePersist
+    public String generateAccountNumber() {
+        Random random = new Random();
+        int accountNumber = random.nextInt(90000000) + 10000000;
+        return String.valueOf(accountNumber);
     }
 
     public AccountDto getAccount(Long accountId) {
         return accountMapper.toDto(accountRepository.findById(accountId).get());
+    }
+
+    public AccountDto getAccountByAccountNumber(String accountNumber) {
+        return accountMapper.toDto(accountRepository.findByAccountNumber(accountNumber));
+    }
+
+    public AccountDto getAccountByUserName(String username) {
+        return accountMapper.toDto(accountRepository.findByUserUsername(username));
     }
 
     public List<AccountDto> getAllAccounts() {

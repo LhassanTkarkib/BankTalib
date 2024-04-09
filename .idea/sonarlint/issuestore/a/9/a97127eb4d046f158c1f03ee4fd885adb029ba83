@@ -1,0 +1,11 @@
+
+ˆ	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ôİ‘œ8Š–çì1J$1eaf8244-fed5-431e-891a-c79d9144cbcd
+®
+java:S1488?"fImmediately return this expression instead of assigning it to the temporary variable "transactiondto".(„ˆƒêüÿÿÿÿ8Œ–çì1J$e2530b9a-cbb1-4303-a7ff-bb1413e1b8e4
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ˜»ùÿÿÿÿÿ8–çì1J$8e605ceb-cc73-4b56-89b4-b2b6fdffa064
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8”–çì1J$23004bd6-cab0-439c-bc8c-192c35b469d1
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8”–çì1J$5642337c-a8ad-4acf-a456-81e1371fea34
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8”–çì1J$916c09ba-e0d8-4ccb-96c4-3d6199f5b7de

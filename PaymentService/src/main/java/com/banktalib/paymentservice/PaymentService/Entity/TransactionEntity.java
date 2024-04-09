@@ -1,6 +1,7 @@
 package com.banktalib.paymentservice.PaymentService.Entity;
 
 
+import com.banktalib.UserClient.AccountDto;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -33,13 +34,16 @@ public class TransactionEntity {
     private Date dateTransaction;
 
     @Column(name = "TypeTransaction")
+    @Enumerated(EnumType.STRING)
     private TransactionType typeTransaction;
 
     @Column(name = "idSenderAccount")
-    private Long idSenderAccount;
+    private String senderAccountNumber;
 
     @Column(name = "idReceiverAccount")
-    private Long idReceiverAccount;
+    private String ReceiverAccountNumber;
+
+
 
 
 }
