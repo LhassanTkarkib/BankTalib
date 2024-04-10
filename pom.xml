@@ -15,12 +15,10 @@
     <module>configserver</module>
     <module>Discovery</module>
     <module>Gateway</module>
-    <module>CommunicationService</module>
     <module>NotificationService</module>
     <module>PaymentService</module>
-    <module>ExpenseTrackingService</module>
-    <module>EventService</module>
     <module>feign-clients</module>
+    <module>BillsMicroService</module>
 
 
 

@@ -45,55 +45,23 @@ services:
    volumes:
      - notification-db:/data/postgres
    ports:
-     - "5224:5432"
-   networks:
-     - db
-   restart: unless-stopped
-
- trackingexp-db:
-   container_name: trackingexp-database
-   image: postgres:16
-   environment:
-     POSTGRES_USER: ryukiro
-     POSTGRES_PASSWORD: ryukiro
-     POSTGRES_DB: trackingexp-database
-     PGDATA: /data/postgres
-   volumes:
-     - trackingexp-db:/data/postgres
-   ports:
      - "5225:5432"
    networks:
      - db
    restart: unless-stopped
 
- event-db:
-   container_name: event-database
+ bill-db:
+   container_name: bill-database
    image: postgres:16
    environment:
      POSTGRES_USER: ryukiro
      POSTGRES_PASSWORD: ryukiro
-     POSTGRES_DB: event-database
+     POSTGRES_DB: bill-database
      PGDATA: /data/postgres
    volumes:
-     - event-db:/data/postgres
+     - bill-db:/data/postgres
    ports:
-     - "5226:5432"
-   networks:
-     - db
-   restart: unless-stopped
-
- communication-db:
-   container_name: communication-database
-   image: postgres:16
-   environment:
-     POSTGRES_USER: ryukiro
-     POSTGRES_PASSWORD: ryukiro
-     POSTGRES_DB: communication-database
-     PGDATA: /data/postgres
-   volumes:
-     - communication-db:/data/postgres
-   ports:
-     - "5227:5432"
+     - "5224:5432"
    networks:
      - db
    restart: unless-stopped
@@ -110,6 +78,4 @@ volumes:
   users-db:
   payement-db:
   notification-db:
-  trackingexp-db:
-  event-db:
-  communication-db:
+  bill-db:

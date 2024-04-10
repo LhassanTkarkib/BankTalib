@@ -1,0 +1,17 @@
+server:
+  port: 4040
+
+spring:
+  application:
+    name: billservice
+  datasource:
+    url: jdbc:postgresql://localhost:5224/bill-database
+    username: ryukiro
+    password: ryukiro
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
