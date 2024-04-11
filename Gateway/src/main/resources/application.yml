@@ -29,6 +29,10 @@ spring:
           uri: http://localhost:6060
           predicates:
             - Path=/api/v1/transactions/**
+        - id: bills-data
+          uri: http://localhost:4040
+          predicates:
+            - Path=/api/v1/Bills/**
     discovery:
       enabled: true
     config:

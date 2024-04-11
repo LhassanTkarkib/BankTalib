@@ -1,8 +1,7 @@
 package com.banktalib.billsmicroservice.BillService.Dto;
 
 import com.banktalib.billsmicroservice.BillService.Enums.PayementStatus;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,13 +9,17 @@ import java.util.Date;
 /**
  * DTO for {@link com.banktalib.billsmicroservice.BillService.Entity.BillEntity}
  */
-@AllArgsConstructor
+@Data
 @Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class BillDto implements Serializable {
-    private final Long idBill;
-    private final Double amount;
-    private final Date dueDate;
-    private final PayementStatus payementStatus;
-    private final String accountNumberInitiated;
-    private final String accountNumberInvolved;
+    private Long idBill;
+    private String billName;
+    private Double amount;
+    private Date dueDate;
+    private PayementStatus payementStatus;
+    private String accountNumberInitiated;
+    private String payersAccountNumber;
 }

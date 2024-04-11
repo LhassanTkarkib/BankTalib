@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
+
 
 @Data
 @AllArgsConstructor
@@ -28,6 +28,9 @@ public class BillEntity {
             generator = "Bill_sequence")
     private Long idBill;
 
+    @Column(name= "billName")
+    private String billName;
+
     @Column(name = "amount")
     private Double amount;
 
@@ -35,7 +38,7 @@ public class BillEntity {
     private Date dueDate;
 
     @Column(name = "payementStatus")
-    @Enumerated (EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private PayementStatus payementStatus;
 
     //who owns the bill
@@ -44,5 +47,5 @@ public class BillEntity {
 
     //who will pay
     @Column(name = "accountNumbersInvolved")
-    private String accountNumberInvolved;
+    private String payersAccountNumber;
 }

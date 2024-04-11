@@ -10,4 +10,7 @@ import java.util.List;
 public interface BillRepository extends JpaRepository<BillEntity, Long> {
 
 
+    BillEntity findAllByAccountNumberInitiated(String accountNumberInitiated);
+
+    BillEntity findAllByPayersAccountNumber(String accountNumberInvolved);
 }
