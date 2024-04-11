@@ -1,16 +1,8 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—öá°ùÿÿÿÿ8„õ§Ôì1J$b64a073d-5de3-4899-8358-aaf464b43e4d
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ˆõ§Ôì1J$8d81d407-0503-411e-9cc6-ee95110a96de
-n
-java:S1452"&Remove usage of generic wildcard type.(ñ™Ìªûÿÿÿÿ8õ§Ôì1J$67a2618c-f399-4f80-ab2f-dc1a28fd1fe3
-i
-java:S1452"&Remove usage of generic wildcard type.(“ÎÈ™8•õ§Ôì1J$1949c5b6-8920-408a-b5aa-050f5efd44f2
-h
-java:S1452#"&Remove usage of generic wildcard type.(“ÙÚG8–õ§Ôì1J$6b3f49ac-ad11-4caa-9b2a-aff4a19a4f35
-n
-java:S1452)"&Remove usage of generic wildcard type.(óÊ±¯úÿÿÿÿ8—õ§Ôì1J$3baf643d-18c3-43c6-a83b-cbfac5a65f2f
-v
-java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8¤¾öÔì1J$17ce8020-5744-4c7e-9f75-3bc4d24c9254
-r
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8¤¾öÔì1J$7cfe1f84-5186-43b9-8537-faa9b9c4f2ee
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—öá°ùÿÿÿÿ8Ìæüì1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ßæüì1
+H
+java:S1452"&Remove usage of generic wildcard type.(ñ™Ìªûÿÿÿÿ8çæüì1
+C
+java:S1452)"&Remove usage of generic wildcard type.(ÇÒ™Õ8ñæüì1

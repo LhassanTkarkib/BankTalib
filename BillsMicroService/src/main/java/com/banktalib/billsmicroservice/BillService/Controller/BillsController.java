@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -26,20 +27,19 @@ public class BillsController {
     }
 
     @GetMapping("/getBillByAccountNumberInitiated/{accountNumberInitiated}")
-    public ResponseEntity<?> getBillByAccountNumberInitiated(@PathVariable String accountNumberInitiated) {
-        BillDto bill = billService.getBillByAccountNumberInitiated(accountNumberInitiated);
-        return new ResponseEntity<>(bill, HttpStatus.OK);
+    public ResponseEntity<List<BillDto>> getAllBillByAccountNumberInitiated(@PathVariable String accountNumberInitiated) {
+
+        return new ResponseEntity<>(billService.getBillByAccountNumberInitiated(accountNumberInitiated), HttpStatus.OK);
     }
 
     @GetMapping("/getBillByAccountNumberInvolved/{accountNumberInvolved}")
-    public ResponseEntity<?> getBillByAccountNumberInvolved(@PathVariable String accountNumberInvolved) {
-        BillDto bill = billService.getBillByAccountNumberInvolved(accountNumberInvolved);
-        return new ResponseEntity<>(bill, HttpStatus.OK);
+    public ResponseEntity<List<BillDto>>  getAllBillByAccountNumberInvolved(@PathVariable String accountNumberInvolved) {
+        return new ResponseEntity<>(billService.getBillByAccountNumberInvolved(accountNumberInvolved), HttpStatus.OK);
     }
 
-    @PutMapping("/updateBill")
-    public ResponseEntity<?> updateBill(@RequestBody BillDto billDto) {
-        BillDto updatedBill = billService.updateBill(billDto);
+    @PutMapping("/updateBill/{id}")
+    public ResponseEntity<?> updateBill(@PathVariable Long id ,@RequestBody BillDto billDto) {
+        BillDto updatedBill = billService.updateBill(id ,billDto);
         return new ResponseEntity<>(updatedBill, HttpStatus.OK);
     }
 

@@ -10,6 +10,9 @@ import com.banktalib.billsmicroservice.BillService.Service.IBillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class BillService implements IBillService {
     @Autowired
@@ -19,26 +22,27 @@ public class BillService implements IBillService {
 
     @Override
     public BillDto createBill(BillDto billDto) {
-//        billDto.setPayementStatus(PayementStatus.UNPAID);
         BillEntity savedBill = billRepository.save(billMapper.toEntity(billDto));
         return billMapper.toDto(savedBill);
     }
 
     @Override
-    public BillDto getBillByAccountNumberInitiated(String accountNumberInitiated) {
-        BillEntity bill = billRepository.findAllByAccountNumberInitiated(accountNumberInitiated);
-        return billMapper.toDto(bill);
+    public List<BillDto> getBillByAccountNumberInitiated(String accountNumberInitiated) {
+        List<BillEntity> billEntities = billRepository.findAllByAccountNumberInitiated(accountNumberInitiated);
+        return billEntities.stream().map(billMapper::toDto).collect(Collectors.toList());
     }
 
     @Override
-    public BillDto getBillByAccountNumberInvolved(String PayersAccountNumber) {
-        BillEntity bill = billRepository.findAllByPayersAccountNumber(PayersAccountNumber);
-        return billMapper.toDto(bill);
+    public List<BillDto> getBillByAccountNumberInvolved(String PayersAccountNumber) {
+        List<BillEntity> billEntities = billRepository.findAllByPayersAccountNumber(PayersAccountNumber);
+        return billEntities.stream().map(billMapper::toDto).collect(Collectors.toList());
     }
 
+    // update using id
     @Override
-    public BillDto updateBill(BillDto billDto) {
-        BillEntity bill = billRepository.findAllByAccountNumberInitiated(billDto.getAccountNumberInitiated());
+    public BillDto updateBill(Long id,BillDto billDto) {
+
+        BillEntity bill = billRepository.findByIdBill(id);
         bill = billMapper.partialUpdate(billDto, bill);
         bill = billRepository.save(bill);
         return billMapper.toDto(bill);

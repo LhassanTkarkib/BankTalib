@@ -1,17 +1,17 @@
 
-m	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8úÑìì1
-E
-java:S54110"(Use a primitive boolean expression here.(‰Ü„8‰Òìì1
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8î••Üë1J$ec142504-a18e-4fdc-a6c6-c622e8ad5f9b
-m
-java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8ŒÓìì1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Óìì1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Óìì1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8œÓìì1
-:
-java:S2119."Save and re-use this "Random".(¼İÅf8¸Óìì1
-o
-java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8ÁÓìì1
+“	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8úÑìì1J$a59d2401-7afd-4751-bd31-00821ebbd7ca
+k
+java:S54110"(Use a primitive boolean expression here.(‰Ü„8‰Òìì1J$10a78ddb-2535-449c-b521-94a96ffc9117
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8î••Üë1J$dd6fddc9-8158-4c54-98f6-b4dfed79e91f
+“
+java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8ŒÓìì1J$895a9eb0-9ca9-4323-968a-dfad4a467cf8
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Óìì1J$4947b296-2ec3-4c68-a88d-edc5949924b1
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Óìì1J$b2e66a00-d47d-4de4-875c-f9a79fd9a9c4
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8œÓìì1J$a3d73a22-9204-4d88-8b8f-274f9d480fba
+`
+java:S2119."Save and re-use this "Random".(¼İÅf8¸Óìì1J$e1f13078-1480-492a-82e6-245f0492c361
+•
+java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8ÁÓìì1J$a5c12913-dd2e-4b46-ae62-fab9c2fc4d59
