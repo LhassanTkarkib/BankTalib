@@ -17,6 +17,12 @@ public class TransactionController {
     private ITransactionService transactionService;
 
 
+    @PostMapping("/createTransaction")
+    public ResponseEntity<TransactionDto> saveTransaction(@RequestBody TransactionDto transactionDto) {
+        TransactionDto savedTransaction = transactionService.saveTransaction(transactionDto);
+        return new ResponseEntity<>(savedTransaction, HttpStatus.CREATED);
+    }
+
     @GetMapping("/{LoggedAccountNumber}")
     public ResponseEntity<List<TransactionDto>> getAllTransactionsByAccountNumber(@PathVariable("LoggedAccountNumber") String LoggedAccountNumber) {
         return new ResponseEntity<>(transactionService

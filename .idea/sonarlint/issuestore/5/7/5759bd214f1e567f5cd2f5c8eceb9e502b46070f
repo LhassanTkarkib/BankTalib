@@ -1,24 +1,0 @@
-
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(›¸¢Ëûÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ş²ÇÇüÿÿÿÿ
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ˆ±ğ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ŒÁ¥¬ıÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¾ë¬úÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(²²‹×øÿÿÿÿ
-—
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÍÅ’Ü
-3
-java:S1118"Hide this public constructor.(ÍÅ’Ü
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(›¸¢Ëûÿÿÿÿ
-Q	java:S125"<This block of commented-out lines of code should be removed.(ØÒ¥è
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ş²ÇÇüÿÿÿÿ
-[
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ˆ±ğ
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ŒÁ¥¬ıÿÿÿÿ
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾ë¬úÿÿÿÿ
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(²²‹×øÿÿÿÿ

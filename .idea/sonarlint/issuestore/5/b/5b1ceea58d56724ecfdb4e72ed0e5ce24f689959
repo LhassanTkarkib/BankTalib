@@ -1,5 +1,0 @@
-
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶·øÿÿÿÿ8ÕĞÔì1J$a0ec22c7-f938-46f6-a561-2a8934b55c34
-§	java:S116,"`Rename this field "ReceiverAccountNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÌùçüÿÿÿÿ8ÀìÚì1J$7e5b516e-c17a-48e0-8df6-b87e27f7dad2
-ˆ
-java:S1128"@Remove this unused import 'com.banktalib.UserClient.AccountDto'.(¢©‰…üÿÿÿÿ8ºÓÙì1J$e734dbbb-7627-4fda-9433-838086ae5827

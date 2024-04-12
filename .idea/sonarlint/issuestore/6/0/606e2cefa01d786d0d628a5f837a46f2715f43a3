@@ -1,6 +1,0 @@
-
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ªò­ùÿÿÿÿJ$83ef8612-a6b4-4b6a-85f6-c2c7c1825860
-ˆ
-java:S1128"@Remove this unused import 'com.banktalib.UserClient.AccountDto'.(¢©‰…üÿÿÿÿ8û†÷ì1J$89d5a09d-ba44-451a-9c58-6855129ee744
-f
-java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙJ$328bce67-9ec5-4301-af57-098df11d5aa3

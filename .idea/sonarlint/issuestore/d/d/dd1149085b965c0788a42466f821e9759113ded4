@@ -1,14 +1,0 @@
-
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8£ÿÓˆç1J$ce3c3527-9bab-47d3-b569-14a4ecddf13f
-˜
-java:S36558"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿ8è±ê1J$ea6a856b-caa2-4ae9-ab67-93c8f24749cd
-“
-java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼Ôá8è±ê1J$9f7f42ae-d743-40ae-8177-2be1de64c61f
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¥÷‘±ê1J$8bc2668d-0f6f-4784-956d-043a3823ea28
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¦÷‘±ê1J$20c36f7c-f720-45ff-91d7-7bf0249d4dc6
-`
-java:S2119""Save and re-use this "Random".(¼İÅf8«÷‘±ê1J$eeeecb1e-a670-485c-b2e2-89e39b16f0d5
-š
-java:S62044"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿ8ú±ê1J$6043aa70-57bc-4be6-9ca2-07d81be98334

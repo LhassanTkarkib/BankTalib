@@ -1,17 +1,0 @@
-
-m	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8úÑìì1
-E
-java:S54110"(Use a primitive boolean expression here.(‰Ü„8‰Òìì1
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8î••Üë1J$ec142504-a18e-4fdc-a6c6-c622e8ad5f9b
-m
-java:S3655M"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8ŒÓìì1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Óìì1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Óìì1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8œÓìì1
-:
-java:S2119."Save and re-use this "Random".(¼İÅf8¸Óìì1
-o
-java:S62049"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8ÁÓìì1
