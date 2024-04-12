@@ -43,7 +43,10 @@ public class BillService implements IBillService {
     @Override
     public List<BillDto> getAllBillsByAccountNumberInvolved(String PayersAccountNumber) {
         List<BillEntity> billEntities = billRepository.findAllByPayersAccountNumber(PayersAccountNumber);
-        return billEntities.stream().map(billMapper::toDto).collect(Collectors.toList());
+        return billEntities.stream()
+                .filter(bill -> bill.getPayementStatus() == PayementStatus.UNPAID)
+                .map(billMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     // update using id
