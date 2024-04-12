@@ -30,6 +30,7 @@ public class BillService implements IBillService {
 
     @Override
     public BillDto createBill(BillDto billDto) {
+
         BillEntity savedBill = billRepository.save(billMapper.toEntity(billDto));
         return billMapper.toDto(savedBill);
     }
@@ -85,14 +86,14 @@ public class BillService implements IBillService {
         bill.setPayementStatus(PayementStatus.PAID);
         bill = billRepository.save(bill);
 
-//        TransactionDto transaction = new TransactionDto();
-//        transaction.setAmount(amount);
-//        transaction.setTypeTransaction(TransactionType.BILL_PAYMENT);
-//        transaction.setDateTransaction(new Date());
-//        transaction.setSenderAccountNumber(account.getAccountNumber());
-//        transaction.setReceiverAccountNumber(billOwner.getAccountNumber());
-//        transactionsClient.createTransaction(transaction);
-//
+        TransactionDto transaction = new TransactionDto();
+        transaction.setAmount(amount);
+        transaction.setTypeTransaction(TransactionType.BILL_PAYMENT);
+        transaction.setDateTransaction(new Date());
+        transaction.setSenderAccountNumber(account.getAccountNumber());
+        transaction.setReceiverAccountNumber(billOwner.getAccountNumber());
+        transactionsClient.createTransaction(transaction);
+
             return billMapper.toDto(bill);
         }
     }

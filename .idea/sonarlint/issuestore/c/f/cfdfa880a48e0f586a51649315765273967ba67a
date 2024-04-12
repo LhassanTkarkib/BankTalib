@@ -1,18 +1,15 @@
 
-r	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢òŒšúÿÿÿÿ8Ã†•‚í1
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(áÚ•Ïùÿÿÿÿ8¿Ä§í1J$38795b3d-315a-4399-a1e7-0c3fe2276ddc
+˜	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢òŒšúÿÿÿÿ8Ã†•‚í1J$2f7115c1-0f97-4d12-9df5-1bc0f8255688
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(áÚ•Ïùÿÿÿÿ8¿Ä§í1J$fb7c21cb-f584-463a-8e10-04ab95620dff
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Å§í1J$87c6ccd0-e0d1-4442-95cc-a5d2823e52c0
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Å§í1J$8faaaf94-1ded-4744-80e3-94845845ea08
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$e7078b53-a29e-4f56-9fab-216094a22c9a
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$9cb59bf9-d40d-4240-8a1a-bd17598c33ba
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$72817c58-d26a-4c34-a6c0-8b86b9314b07
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$4feda29b-82b6-4e5a-9ac4-485837753396
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$2de2558c-8456-4f1e-a6e6-c8cf8bb0e509
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$35791b4d-1893-495d-a5b3-2e603b10c0fe
 •
-java:S6204("RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(´¡¹İ8ˆÅ§í1J$f16d6d7b-a700-4932-9b71-da6c0e2f5ce1
-o
-java:S62041"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8•‡•‚í1
-~	java:S125X"<This block of commented-out lines of code should be removed.(õûÓ8‹ÿØí1J$f3cb06f2-2deb-46a4-887d-8cb2d85c028e
-n
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ÿØí1J$f6e18411-5eb0-4b76-9f4b-f92fd36bcd6f
+java:S6204)"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(´¡¹İ8ˆÅ§í1J$af0eccce-d707-4e39-8879-74f4a1a9138a
+•
+java:S62042"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8•‡•‚í1J$9247bbc4-96b9-4b04-ab55-0c6f57b273c2
