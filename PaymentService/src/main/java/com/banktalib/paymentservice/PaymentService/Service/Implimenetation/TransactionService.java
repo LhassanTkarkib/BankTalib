@@ -21,6 +21,14 @@ public class TransactionService implements ITransactionService {
     private TransactionMapper transactionMapper;
 
 
+
+    @Override
+    public TransactionDto saveTransaction(TransactionDto transactionDto) {
+        TransactionEntity transactionEntity = transactionMapper.toEntity(transactionDto);
+        TransactionEntity savedTransaction = transactionRepository.save(transactionEntity);
+        return transactionMapper.toDto(savedTransaction);
+    }
+
     @Override
     public List<TransactionDto> getAllTransactionsByAccountNumber(String accountNumber) {
         List<TransactionEntity> transactions = transactionRepository.findAllBySenderAccountNumber(accountNumber);

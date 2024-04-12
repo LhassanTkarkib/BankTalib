@@ -10,9 +10,12 @@ public interface IBillService {
 
     BillDto createBill(BillDto billDto);
 
-    List<BillDto> getBillByAccountNumberInitiated(String accountNumberInitiated);
+    List<BillDto> getAllBillsByAccountNumberInitiated(String accountNumberInitiated);
 
-    List<BillDto> getBillByAccountNumberInvolved(String accountNumberInvolved);
+    List<BillDto> getAllBillsByAccountNumberInvolved(String accountNumberInvolved);
 
-    BillDto updateBill(Long id,BillDto billDto);
+//    BillDto updateBill(Long id,BillDto billDto);
+
+    // update using id
+    BillDto payBill(Long id, BillDto billDto,String accountNumberInvolved);
 }

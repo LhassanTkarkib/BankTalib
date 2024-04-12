@@ -29,17 +29,17 @@ public class BillsController {
     @GetMapping("/getBillByAccountNumberInitiated/{accountNumberInitiated}")
     public ResponseEntity<List<BillDto>> getAllBillByAccountNumberInitiated(@PathVariable String accountNumberInitiated) {
 
-        return new ResponseEntity<>(billService.getBillByAccountNumberInitiated(accountNumberInitiated), HttpStatus.OK);
+        return new ResponseEntity<>(billService.getAllBillsByAccountNumberInitiated(accountNumberInitiated), HttpStatus.OK);
     }
 
     @GetMapping("/getBillByAccountNumberInvolved/{accountNumberInvolved}")
     public ResponseEntity<List<BillDto>>  getAllBillByAccountNumberInvolved(@PathVariable String accountNumberInvolved) {
-        return new ResponseEntity<>(billService.getBillByAccountNumberInvolved(accountNumberInvolved), HttpStatus.OK);
+        return new ResponseEntity<>(billService.getAllBillsByAccountNumberInvolved(accountNumberInvolved), HttpStatus.OK);
     }
 
-    @PutMapping("/updateBill/{id}")
-    public ResponseEntity<?> updateBill(@PathVariable Long id ,@RequestBody BillDto billDto) {
-        BillDto updatedBill = billService.updateBill(id ,billDto);
+    @PutMapping("/payBill/{id}/{accountNumberInvolved}")
+    public ResponseEntity<?> payBill(@PathVariable Long id ,@RequestBody BillDto billDto,@PathVariable String accountNumberInvolved) {
+        BillDto updatedBill = billService.payBill(id ,billDto,accountNumberInvolved);
         return new ResponseEntity<>(updatedBill, HttpStatus.OK);
     }
 

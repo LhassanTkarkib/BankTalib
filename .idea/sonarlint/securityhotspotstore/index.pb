@@ -121,3 +121,9 @@ kBillsMicroService/src/main/java/com/banktalib/billsmicroservice/BillService/Con
 jBillsMicroService/src/main/java/com/banktalib/billsmicroservice/BillService/Repository/BillRepository.java,a\2\a226ecae586e10cb1c0a0708a089af33e9ef29f2
 •
 eBillsMicroService/src/main/java/com/banktalib/billsmicroservice/BillService/Service/IBillService.java,8\a\8a2755454d25640e2593631c2fab64a716f328c3
+x
+Hfeign-clients/src/main/java/com/banktalib/UserClient/TransactionDto.java,d\3\d30a2821b916c14ae62d0db4bfabd4cfa640f594
+y
+Ifeign-clients/src/main/java/com/banktalib/UserClient/TransactionType.java,4\d\4dd589a7239d2a2df41c2028459e0758004c5edf
+|
+Lfeign-clients/src/main/java/com/banktalib/UserClient/TransactionsClient.java,8\9\896d9e50c7b456c9b703a3afc183e7c13abfcbf1

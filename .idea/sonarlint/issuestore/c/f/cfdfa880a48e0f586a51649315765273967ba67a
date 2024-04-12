@@ -1,11 +1,18 @@
 
-“	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇëÈ¼8’—Ûûì1J$160ad8e1-ee68-4a2f-9787-53e19a4960a0
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(áÚ•Ïùÿÿÿÿ8”—Ûûì1J$9a5926b1-a160-42c9-8c10-7a7ae2916427
+˜	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢òŒšúÿÿÿÿ8½Ä§í1J$ffba3c0f-8cc9-4688-be20-86aa3bbde012
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(áÚ•Ïùÿÿÿÿ8¿Ä§í1J$0b83733e-4e8c-4dc0-bc0c-2e354bf6119a
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤—Ûûì1J$9428df46-b222-4fff-9510-d43bd1e133bc
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Å§í1J$da7cd9f3-28c6-4fd6-a633-20ca416bfadd
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¥—Ûûì1J$adf3e224-b207-4a1a-97f6-d8918b6bea04
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$62cd88d7-3f09-4b0b-8d9a-fe80da5d6ac2
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$d30424e1-86f3-407b-a1de-d8e73a43d6ed
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒÅ§í1J$1be5cdbf-9d0c-4f41-86af-5dda97df3427
 •
-java:S6204 "RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(´¡¹İ8Ãûğûì1J$c4115c0c-3aef-4c7b-a314-02030400c473
+java:S6204("RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(´¡¹İ8ˆÅ§í1J$1d31401f-390b-498a-b594-6694a1ed72b4
 •
-java:S6204&"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(´¡¹İ8Ú¡‚üì1J$ea29f408-ab00-4e98-99de-16247c4182bd
+java:S6204."RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(´¡¹İ8‰Å§í1J$06171980-6244-4a3f-ad1c-a1cee2f09866
+~	java:S125U"<This block of commented-out lines of code should be removed.(õûÓ8‹ÿØí1J$135c55b3-8f14-4b63-9628-4481d44fa925
+n
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ÿØí1J$aaf26580-217c-40a5-85df-368a47e457ed

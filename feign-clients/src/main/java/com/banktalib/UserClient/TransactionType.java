@@ -1,4 +1,4 @@
-package com.banktalib.paymentservice.PaymentService.Enums;
+package com.banktalib.UserClient;
 
 public enum TransactionType {
     CASH_WITHDRAWAL,

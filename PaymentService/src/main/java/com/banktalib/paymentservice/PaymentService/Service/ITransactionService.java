@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface ITransactionService {
 
+    TransactionDto saveTransaction(TransactionDto transactionDto);
+
     List<TransactionDto> getAllTransactionsByAccountNumber(String accountNumber);
 
     TransactionDto getTransaction(Long id);
