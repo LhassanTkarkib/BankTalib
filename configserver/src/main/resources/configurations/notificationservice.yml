@@ -1,0 +1,17 @@
+server:
+  port: 4040
+
+spring:
+  application:
+    name: notificationservice
+  datasource:
+    url: jdbc:postgresql://localhost:5225/notification-database
+    username: ryukiro
+    password: ryukiro
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

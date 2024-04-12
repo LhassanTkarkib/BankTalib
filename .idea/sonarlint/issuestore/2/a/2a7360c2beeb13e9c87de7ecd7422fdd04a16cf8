@@ -1,0 +1,8 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ºêö°J$ac88e51f-1065-4ca7-bdc0-75a8cf5ef1f0
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$6513e0cf-e1c4-4fd3-922c-4418fb2b3f75
+~
+java:S1128"aRemove this unused import 'com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity'.(§Ý«ª8Ýï¥¤í1
+w
+java:S1128"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚÞ8ø¤ª£í1J$267ab4fc-ab86-4ac8-abc7-63a7a59cbef3

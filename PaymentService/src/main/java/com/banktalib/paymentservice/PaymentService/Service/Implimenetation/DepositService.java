@@ -2,8 +2,12 @@ package com.banktalib.paymentservice.PaymentService.Service.Implimenetation;
 
 import com.banktalib.UserClient.AccountClient;
 import com.banktalib.UserClient.AccountDto;
+import com.banktalib.paymentservice.PaymentService.Dto.TransactionDto;
+import com.banktalib.paymentservice.PaymentService.Dto.TransferDto;
 import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
+import com.banktalib.paymentservice.PaymentService.Mapper.TransactionMapper;
+import com.banktalib.paymentservice.PaymentService.Producer.PayementProducer;
 import com.banktalib.paymentservice.PaymentService.Repository.TransactionRepository;
 import com.banktalib.paymentservice.PaymentService.Service.IDepositService;
 import jakarta.ws.rs.NotFoundException;
@@ -21,6 +25,12 @@ public class DepositService implements IDepositService {
 
     @Autowired
     private TransactionRepository transactionRepository;
+
+    @Autowired
+    private PayementProducer payementProducer;
+
+    @Autowired
+    private TransactionMapper transactionMapper;
 
     @Override
     @Transactional
@@ -41,6 +51,7 @@ public class DepositService implements IDepositService {
         transaction.setTypeTransaction(TransactionType.CASH_DEPOSIT);
         transaction.setDateTransaction(new Date());
         transaction.setSenderAccountNumber(account.getAccountNumber());
-        transactionRepository.save(transaction);
+        TransactionDto transactionDto =transactionMapper.toDto(transactionRepository.save(transaction));
+        payementProducer.sendMessage(transactionDto);
     }
 }
