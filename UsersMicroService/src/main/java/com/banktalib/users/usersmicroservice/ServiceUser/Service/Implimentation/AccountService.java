@@ -18,11 +18,14 @@ import java.util.stream.Collectors;
 @Service
 public class AccountService implements IAccountService {
 
-    @Autowired
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
+    private final AccountMapper accountMapper;
 
     @Autowired
-    private AccountMapper accountMapper;
+    public AccountService(AccountRepository accountRepository, AccountMapper accountMapper) {
+        this.accountRepository = accountRepository;
+        this.accountMapper = accountMapper;
+    }
 
     public AccountDto createAccount(AccountDto account){
         AccountEntity savedAccount = accountMapper.toEntity(account);

@@ -1,0 +1,14 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$772f4807-9e6e-4d6c-a297-a2c2ef1310b2
+‘
+java:S3655;"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿJ$764b9c82-530c-4723-b683-ac49eb94749e
+Œ
+java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼ÔáJ$e813e845-fdc0-40f2-b13c-0bd032d47c27
+Y
+java:S2119%"Save and re-use this "Random".(¼İÅfJ$c9cd9746-45c3-46cf-b5fc-af6d78c35183
+“
+java:S62047"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿJ$e4c7af73-c147-4180-a7f0-1a7b7ed2f890
+¡
+java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿJ$7460eddd-9c24-4e24-b21b-6a7a2ea6e09a
+¤
+java:S1128"hRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository'.(ï®ÓòJ$6adff782-809d-40eb-8dfe-9a08b98d88ab

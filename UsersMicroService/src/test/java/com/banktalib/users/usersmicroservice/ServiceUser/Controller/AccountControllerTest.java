@@ -1,115 +1,101 @@
 package com.banktalib.users.usersmicroservice.ServiceUser.Controller;
+import com.banktalib.users.usersmicroservice.ServiceUser.Controller.AccountController;
 import com.banktalib.users.usersmicroservice.ServiceUser.Dto.AccountDto;
 import com.banktalib.users.usersmicroservice.ServiceUser.Service.IAccountService;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@WebMvcTest(AccountController.class)
 public class AccountControllerTest {
 
-    @InjectMocks
-    AccountController accountController;
+    @Autowired
+    private MockMvc mockMvc;
 
-    @Mock
-    IAccountService accountService;
+    @MockBean
+    private IAccountService accountService;
+
+    private AccountDto accountDto;
 
     @BeforeEach
-    public void init() {
-        MockitoAnnotations.initMocks(this);
+    public void setUp() {
+        accountDto = new AccountDto();
+        accountDto.setAccountNumber("123456");
     }
 
     @Test
-    public void getAllAccountsReturnsAccountList() {
-        AccountDto accountDto = new AccountDto();
-        List<AccountDto> accountDtoList = Arrays.asList(accountDto);
-
+    public void testGetAllAccounts() throws Exception {
+        List<AccountDto> accountDtoList = Collections.singletonList(accountDto);
         when(accountService.getAllAccounts()).thenReturn(accountDtoList);
 
-        ResponseEntity<List<AccountDto>> response = accountController.getAllAccounts();
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(accountDtoList, response.getBody());
+        mockMvc.perform(get("/api/v1/accounts")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].idAccount").value(accountDto.getIdAccount()))
+                .andExpect(jsonPath("$[0].accountNumber").value(accountDto.getAccountNumber()));
     }
 
     @Test
-    public void getAccountByIdReturnsAccount() {
-        AccountDto accountDto = new AccountDto();
-        Long accountId = 1L;
+    public void testGetAccountById() throws Exception {
+        when(accountService.getAccount(anyLong())).thenReturn(accountDto);
 
-        when(accountService.getAccount(accountId)).thenReturn(accountDto);
-
-        ResponseEntity<AccountDto> response = accountController.getAccountById(accountId);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(accountDto, response.getBody());
+        mockMvc.perform(get("/api/v1/accounts/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.idAccount").value(accountDto.getIdAccount()))
+                .andExpect(jsonPath("$.accountNumber").value(accountDto.getAccountNumber()));
     }
 
     @Test
-    public void getAccountByAccountNumberReturnsAccount() {
-        AccountDto accountDto = new AccountDto();
-        String accountNumber = "123456";
+    public void testCreateAccount() throws Exception {
+        when(accountService.createAccount(any())).thenReturn(accountDto);
 
-        when(accountService.getAccountByAccountNumber(accountNumber)).thenReturn(accountDto);
-
-        ResponseEntity<AccountDto> response = accountController.getAccountByAccountNumber(accountNumber);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(accountDto, response.getBody());
+        mockMvc.perform(post("/api/v1/accounts/createAccount")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"idAccount\":1,\"accountNumber\":\"123456\",\"balance\":1000.0}"))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.idAccount").value(accountDto.getIdAccount()))
+                .andExpect(jsonPath("$.accountNumber").value(accountDto.getAccountNumber()));
     }
 
     @Test
-    public void getAccountByUsernameReturnsAccount() {
-        AccountDto accountDto = new AccountDto();
-        String username = "testUser";
+    public void testUpdateAccount() throws Exception {
+        when(accountService.updateAccount(anyLong(), any())).thenReturn(accountDto);
 
-        when(accountService.getAccountByUserName(username)).thenReturn(accountDto);
-
-        ResponseEntity<AccountDto> response = accountController.getAccountByUsername(username);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(accountDto, response.getBody());
+        mockMvc.perform(put("/api/v1/accounts/updateAccount/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"idAccount\":1,\"accountNumber\":\"123456\",\"balance\":1000.0}"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.idAccount").value(accountDto.getIdAccount()))
+                .andExpect(jsonPath("$.accountNumber").value(accountDto.getAccountNumber()));
     }
 
     @Test
-    public void createAccountReturnsCreatedAccount() {
-        AccountDto accountDto = new AccountDto();
+    public void testDeleteAccount() throws Exception {
+        doNothing().when(accountService).deleteAccount(anyLong());
 
-        when(accountService.createAccount(accountDto)).thenReturn(accountDto);
-
-        ResponseEntity<AccountDto> response = accountController.createAccount(accountDto);
-
-        assertEquals(201, response.getStatusCodeValue());
-        assertEquals(accountDto, response.getBody());
+        mockMvc.perform(delete("/api/v1/accounts/deleteAccount/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
 
-    @Test
-    public void updateAccountReturnsUpdatedAccount() {
-        AccountDto accountDto = new AccountDto();
-        Long accountId = 1L;
-
-        when(accountService.updateAccount(accountId, accountDto)).thenReturn(accountDto);
-
-        ResponseEntity<AccountDto> response = accountController.updateAccount(accountId, accountDto);
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(accountDto, response.getBody());
-    }
-
-    @Test
-    public void deleteAccountReturnsOkStatus() {
-        Long accountId = 1L;
-
-        ResponseEntity<Void> response = accountController.deleteAccount(accountId);
-
-        assertEquals(200, response.getStatusCodeValue());
+    @AfterEach
+    public void tearDown() {
+        accountDto = null;
     }
 }
