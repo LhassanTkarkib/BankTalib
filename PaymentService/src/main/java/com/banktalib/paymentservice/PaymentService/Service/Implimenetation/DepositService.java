@@ -53,6 +53,7 @@ public class DepositService implements IDepositService {
         transaction.setSenderAccountNumber(account.getAccountNumber());
 
         TransactionDto transactionDto =transactionMapper.toDto(transactionRepository.save(transaction));
+
         com.banktalib.UserClient.TransactionDto transactionDto1 = new com.banktalib.UserClient.TransactionDto();
 
         transactionDto1.setAmount(transactionDto.getAmount());

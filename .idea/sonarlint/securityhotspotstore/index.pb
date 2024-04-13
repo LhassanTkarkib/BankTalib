@@ -51,3 +51,7 @@ ePaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Config
 uNotificationService/src/main/java/com/banktalib/notificationservice/NotificationsService/Config/KafkaTopicConfig.java,5\a\5a5d3cbb382b18e294ba78c446ebe4ddeea1d3d1
 F
 PaymentService/pom.xml,8\3\83e3eb4674e29f7c9b9cd1e219c0453bd4b765e7
+y
+Ifeign-clients/src/main/java/com/banktalib/UserClient/TransactionType.java,4\d\4dd589a7239d2a2df41c2028459e0758004c5edf
+§
+wPaymentService/src/main/java/com/banktalib/paymentservice/PaymentService/Service/Implimenetation/WithdrawalService.java,1\9\19488781d04f59a78656491222dafef07046fa27

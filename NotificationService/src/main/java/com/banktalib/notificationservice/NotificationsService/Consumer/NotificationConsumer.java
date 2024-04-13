@@ -16,32 +16,24 @@ public class NotificationConsumer {
     @KafkaListener(topics = "Notifications-events", groupId = "notifications", containerFactory = "kafkaListenerContainerFactory")
     public void consume(TransactionDto transactionDto) {
 
-//        if (transactionDto.getTypeTransaction().equals("DEPOSIT")) {
+        if (String.valueOf(transactionDto.getTypeTransaction()).equals("CASH_DEPOSIT")) {
             NotificationDto notificationDto = new NotificationDto();
             notificationDto.setNotificationTitle("Deposit");
             notificationDto.setAccountNumber(transactionDto.getSenderAccountNumber());
             notificationDto.setMessage("You have deposited " + transactionDto.getAmount() + " to your account");
             notificationService.createNotification(notificationDto);
-//        }
-//        else if (transactionDto.getTypeTransaction()=="WITHDRAW") {
-//            NotificationDto notificationDto = new NotificationDto();
-//            notificationDto.setAccountNumber(transactionDto.getAccountNumber());
-//            notificationDto.setMessage("You have withdrawn " + transactionDto.getAmount() + " from your account");
-//            notificationService.createNotification(notificationDto);
-//        }
-//        else if (transactionDto.getTypeTransaction()=="TRANSFER") {
-//            NotificationDto notificationDto = new NotificationDto();
-//            notificationDto.setAccountNumber(transactionDto.getAccountNumber());
-//            notificationDto.setMessage("You have transferred " + transactionDto.getAmount() + " from your account to " + transactionDto.getReceiverAccountNumber());
-//            notificationService.createNotification(notificationDto);
-//        }
-//        else {
-//            NotificationDto notificationDto = new NotificationDto();
-//            notificationDto.setAccountNumber(transactionDto.getAccountNumber());
-//            notificationDto.setMessage("You have paid " + transactionDto.getAmount() + " to " + transactionDto.getReceiverAccountNumber());
-//            notificationService.createNotification(notificationDto);
-//        }
-
-
+        }else if (String.valueOf(transactionDto.getTypeTransaction()).equals("CASH_WITHDRAWAL")) {
+            NotificationDto notificationDto = new NotificationDto();
+            notificationDto.setNotificationTitle("Withdrawal");
+            notificationDto.setAccountNumber(transactionDto.getSenderAccountNumber());
+            notificationDto.setMessage("You have withdrawn " + transactionDto.getAmount() + " from your account");
+            notificationService.createNotification(notificationDto);
+        }else if (String.valueOf(transactionDto.getTypeTransaction()).equals("CASH_TRANSFER")) {
+            NotificationDto notificationDto = new NotificationDto();
+            notificationDto.setNotificationTitle("Transfer");
+            notificationDto.setAccountNumber(transactionDto.getSenderAccountNumber());
+            notificationDto.setMessage("You have transferred " + transactionDto.getAmount() + " from your account");
+            notificationService.createNotification(notificationDto);
+        }
     }
 }
