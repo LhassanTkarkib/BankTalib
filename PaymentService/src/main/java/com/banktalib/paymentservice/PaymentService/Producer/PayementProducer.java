@@ -1,8 +1,6 @@
 package com.banktalib.paymentservice.PaymentService.Producer;
 
-import com.banktalib.paymentservice.PaymentService.Dto.TransactionDto;
-import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
-import org.slf4j.LoggerFactory;
+import com.banktalib.UserClient.TransactionDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -12,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PayementProducer {
-
 
     @Autowired
     private KafkaTemplate<String, TransactionDto> kafkaTemplate;

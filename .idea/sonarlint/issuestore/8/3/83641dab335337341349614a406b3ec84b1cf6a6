@@ -1,7 +1,6 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆµÒŒþÿÿÿÿ8 »©¤í1J$07e0ced8-782e-4b1c-b731-6eb1cc819901
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿—•¬ûÿÿÿÿ8§»©¤í1J$f31a41cd-fc81-4104-b010-d8403d261fd3
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆµÒŒþÿÿÿÿ8Â–·¦í1J$36767b8f-8848-4274-a2a4-59268019049c
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8©»©¤í1J$6c67e21c-853a-4436-99dc-9b4db3d25e9a
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(ìË¤ªúÿÿÿÿ8®»©¤í1J$2e3fccc5-9218-4cc3-a946-59d8b1bc7772
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Ê–·¦í1J$f334d743-3d92-4fd7-a3bf-2b34c9ea884c
+~	java:S125"<This block of commented-out lines of code should be removed.(ÁÎŽ8Í–·¦í1J$0a77bb90-8277-4dd0-baeb-d5b50e8ee137
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8Ï–·¦í1J$d0ee57dd-70ac-4b8b-943d-12c641d3e3c8

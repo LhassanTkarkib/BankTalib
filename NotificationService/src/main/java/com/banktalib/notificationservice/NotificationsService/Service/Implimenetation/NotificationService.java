@@ -25,7 +25,11 @@ public class NotificationService implements INotificationService {
 
     }
 
+    @Override
+    public List<NotificationDto> getNotificationByAccountNumber(String accountNumber) {
+        return notificationRepository.findAllByAccountNumber(accountNumber).stream().map(notificationMapper::toDto).collect(Collectors.toList());
 
+    }
 
     @Override
     public NotificationDto getNotificationById(Long id) {
@@ -34,6 +38,7 @@ public class NotificationService implements INotificationService {
 
     @Override
     public NotificationDto createNotification(NotificationDto notificationDto) {
+        notificationDto.setDate(new java.util.Date());
         return notificationMapper.toDto(notificationRepository.save(notificationMapper.toEntity(notificationDto)));
     }
 

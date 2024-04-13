@@ -33,6 +33,10 @@ spring:
           uri: http://localhost:4040
           predicates:
             - Path=/api/v1/Bills/**
+        - id: notifications-data
+          uri: http://localhost:4041
+          predicates:
+            - Path=/api/v1/Notification/**
     discovery:
       enabled: true
     config:

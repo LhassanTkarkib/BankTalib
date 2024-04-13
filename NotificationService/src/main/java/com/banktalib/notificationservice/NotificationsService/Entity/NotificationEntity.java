@@ -1,6 +1,4 @@
 package com.banktalib.notificationservice.NotificationsService.Entity;
-
-
 import com.banktalib.notificationservice.NotificationsService.Enums.NotificationCetgory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-
 
 @Data
 @AllArgsConstructor
@@ -28,17 +25,17 @@ public class NotificationEntity {
             generator = "Notification_sequence")
     private Long idNotification;
 
-    @Column(name= "AccountNumber")
-    private String AccountNumber;
+    @Column(name= "accountNumber")
+    private String accountNumber;
 
-    @Column(name= "NotificationTitle")
-    private String NotificationTitle;
+    @Column(name= "notificationTitle")
+    private String notificationTitle;
 
-    @Column(name = "Message")
-    private String Message;
+    @Column(name = "message")
+    private String message;
 
-    @Column(name = "Date")
-    private Date Date;
+    @Column(name = "date")
+    private Date date;
 
     @Column(name = "notificationCetgory")
     @Enumerated(EnumType.STRING)

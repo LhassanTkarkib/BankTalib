@@ -11,6 +11,8 @@ public interface INotificationService {
 
     List<NotificationDto> getAllNotifications();
 
+    List<NotificationDto> getNotificationByAccountNumber(String accountNumber);
+
     NotificationDto getNotificationById(Long id);
 
     NotificationDto createNotification(NotificationDto notificationDto);

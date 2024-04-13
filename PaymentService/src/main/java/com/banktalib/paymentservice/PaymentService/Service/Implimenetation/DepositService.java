@@ -2,8 +2,8 @@ package com.banktalib.paymentservice.PaymentService.Service.Implimenetation;
 
 import com.banktalib.UserClient.AccountClient;
 import com.banktalib.UserClient.AccountDto;
+
 import com.banktalib.paymentservice.PaymentService.Dto.TransactionDto;
-import com.banktalib.paymentservice.PaymentService.Dto.TransferDto;
 import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
 import com.banktalib.paymentservice.PaymentService.Mapper.TransactionMapper;
@@ -51,7 +51,17 @@ public class DepositService implements IDepositService {
         transaction.setTypeTransaction(TransactionType.CASH_DEPOSIT);
         transaction.setDateTransaction(new Date());
         transaction.setSenderAccountNumber(account.getAccountNumber());
+
         TransactionDto transactionDto =transactionMapper.toDto(transactionRepository.save(transaction));
-        payementProducer.sendMessage(transactionDto);
+        com.banktalib.UserClient.TransactionDto transactionDto1 = new com.banktalib.UserClient.TransactionDto();
+
+        transactionDto1.setAmount(transactionDto.getAmount());
+        transactionDto1.setSenderAccountNumber(transactionDto.getSenderAccountNumber());
+        String type = transactionDto.getTypeTransaction().toString();
+        transactionDto1.setDateTransaction(transactionDto.getDateTransaction());
+        transactionDto1.setTypeTransaction(com.banktalib.UserClient.TransactionType.valueOf(type));
+
+
+        payementProducer.sendMessage(transactionDto1);
     }
 }

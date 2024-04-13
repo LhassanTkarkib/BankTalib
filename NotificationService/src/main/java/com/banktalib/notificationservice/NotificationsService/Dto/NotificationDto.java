@@ -4,6 +4,7 @@ import com.banktalib.notificationservice.NotificationsService.Enums.Notification
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,11 +15,12 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Data
+@NoArgsConstructor
 public class NotificationDto implements Serializable {
     private Long idNotification;
-    private String AccountNumber;
-    private String NotificationTitle;
-    private String Message;
-    private java.util.Date Date;
+    private String accountNumber;
+    private String notificationTitle;
+    private String message;
+    private java.util.Date date;
     private NotificationCetgory notificationCetgory;
 }

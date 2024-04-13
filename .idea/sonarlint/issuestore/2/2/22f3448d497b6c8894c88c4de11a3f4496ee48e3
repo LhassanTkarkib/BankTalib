@@ -1,22 +1,31 @@
 
 ’
-java:S1192'"ODefine a constant instead of duplicating this literal "Invalid amount" 3 times.(Ê˜É½8Ã˜¤£í1J$19a8e444-3346-4c23-a502-31638a7afc40
+java:S1192'"ODefine a constant instead of duplicating this literal "Invalid amount" 3 times.(Ê˜É½8Ã˜¤£í1J$be558102-1636-4a9d-b1e7-973604fdb1ab
 ‰
-java:S1192'"FDefine a constant instead of duplicating this literal "Error" 3 times.(Ê˜É½8Ä˜¤£í1J$50298ce3-18d2-4fb0-b025-c6a6552da227
-“	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õøá8Å˜¤£í1J$38fe7916-25bb-47cd-97b1-eec656562d6f
-“	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù–Øœ8Å˜¤£í1J$cbf86ea3-fe49-420e-86f5-01b1b3783415
-“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¬ş8Å˜¤£í1J$a3c63637-934f-4bff-ae96-927c8b0cb19c
-“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¬ş8Å˜¤£í1J$5e665c09-ac5b-430a-a862-2dbeaa2b17be
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’­¥Ãûÿÿÿÿ8È˜¤£í1J$e39d8f78-f95c-47ca-9461-32d2f518b411
+java:S1192'"FDefine a constant instead of duplicating this literal "Error" 3 times.(Ê˜É½8Ä˜¤£í1J$de595902-af34-4883-adfb-3e87e8c6e554
+“	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õøá8Å˜¤£í1J$a8a2280a-3913-425c-948f-07b960724809
+“	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù–Øœ8Å˜¤£í1J$32244023-224f-4fdd-9796-6c38b1134e3b
+“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¬ş8Å˜¤£í1J$8a8f4dd5-c342-4273-843f-09bd635e3abb
+“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¬ş8Å˜¤£í1J$d2434e36-b13c-418e-8c5b-c9e94ff5d898
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’­¥Ãûÿÿÿÿ8È˜¤£í1J$ed2cb327-ffba-4cdb-993b-721af83cae5e
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ù˜¤£í1J$271ddadb-beba-4941-a289-7254e890846e
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ù˜¤£í1J$7d26a0df-9807-4c8b-a02a-8f7b5a1b68d6
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ù˜¤£í1J$f4f4201c-5ab0-49c3-8f96-728e3805306a
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ù˜¤£í1J$30765f11-786f-4b15-b10f-053fe8056e48
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ù˜¤£í1J$98c7cbfd-248d-4d5b-ba31-6fa1184ad891
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ù˜¤£í1J$446bf456-9120-4be6-bbb9-8b77223abed4
 i
-java:S1452#"&Remove usage of generic wildcard type.(õøá8Ş˜¤£í1J$9a72bc90-a83c-4a65-aad7-f1b7b28069ce
+java:S1452#"&Remove usage of generic wildcard type.(õøá8Ş˜¤£í1J$6d26e693-25a0-4bb6-b423-31b0865880c1
 i
-java:S14525"&Remove usage of generic wildcard type.(ù–Øœ8á˜¤£í1J$f8859e4c-2996-4a96-99a2-3323501dd48c
+java:S14525"&Remove usage of generic wildcard type.(ù–Øœ8á˜¤£í1J$fe5d290a-5456-4606-87a1-d9050e0864f9
 i
-java:S1452E"&Remove usage of generic wildcard type.(æ¬ş8ã˜¤£í1J$68bf84a0-fb8a-47bf-88e6-0605e246ef31
+java:S1452E"&Remove usage of generic wildcard type.(æ¬ş8ã˜¤£í1J$65492b89-6c01-49c8-bf56-79c94dac5936
+„
+java:S1128"bRemove this unused import 'com.banktalib.paymentservice.PaymentService.Producer.PayementProducer'.(¤¢öİùÿÿÿÿ8› ï¥í1
+†
+java:S1128"dRemove this unused import 'com.banktalib.paymentservice.PaymentService.Service.ITransactionService'.(ÕÊ‡şÿÿÿÿ8œ ï¥í1
+‘
+java:S1128
+"oRemove this unused import 'com.banktalib.paymentservice.PaymentService.Service.Implimenetation.DepositService'.(ªÎôÓüÿÿÿÿ8œ ï¥í1
+d
+java:S1128"BRemove this unused import 'com.netflix.discovery.converters.Auto'.(İ¼’²ùÿÿÿÿ8œ ï¥í1

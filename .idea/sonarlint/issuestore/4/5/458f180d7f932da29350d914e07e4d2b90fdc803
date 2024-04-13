@@ -1,5 +1,0 @@
-
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìúÿÿÿÿJ$843e0a99-7348-425b-95d3-2dac1e6d74f3
-£	java:S116"\Rename this field "NotificationTitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÈŸøÿÿÿÿ8¡—‰ í1J$830c0b47-fc2c-49cd-8fc3-2af493c764d7
-“	java:S116""RRename this field "Message" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Âóy8æªƒ í1J$dfea20ef-baa6-416d-9428-c584acf91170
-–	java:S116%"ORename this field "Date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÂÿÿÿÿÿ8Íüƒ í1J$18214de0-1df0-41b9-b5a0-ea03d8e21cd2
