@@ -4,6 +4,7 @@ import com.banktalib.UserClient.AccountClient;
 import com.banktalib.UserClient.AccountDto;
 import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
+import com.banktalib.paymentservice.PaymentService.Producer.PayementProducer;
 import com.banktalib.paymentservice.PaymentService.Repository.TransactionRepository;
 import com.banktalib.paymentservice.PaymentService.Service.IWithdrawalService;
 import jakarta.ws.rs.NotFoundException;
@@ -21,6 +22,9 @@ public class WithdrawalService implements IWithdrawalService {
 
     @Autowired
     private TransactionRepository transactionRepository;
+
+    @Autowired
+    private PayementProducer payementProducer;
 
     @Override
     @Transactional
@@ -47,6 +51,17 @@ public class WithdrawalService implements IWithdrawalService {
         transaction.setDateTransaction(new Date());
         transaction.setSenderAccountNumber(account.getAccountNumber());
         transactionRepository.save(transaction);
+
+        com.banktalib.UserClient.TransactionDto transactionDto1 = new com.banktalib.UserClient.TransactionDto();
+
+        transactionDto1.setAmount(transaction.getAmount());
+        transactionDto1.setSenderAccountNumber(transaction.getSenderAccountNumber());
+        String type = transaction.getTypeTransaction().toString();
+        transactionDto1.setDateTransaction(transaction.getDateTransaction());
+        transactionDto1.setTypeTransaction(com.banktalib.UserClient.TransactionType.valueOf(type));
+
+
+        payementProducer.sendMessage(transactionDto1);
     }
 
 

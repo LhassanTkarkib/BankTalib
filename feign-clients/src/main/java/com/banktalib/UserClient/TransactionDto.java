@@ -12,10 +12,12 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransactionDto implements Serializable {
+
     private Long idTransaction;
     private Double amount;
     private Date dateTransaction;
     private TransactionType typeTransaction;
     private String senderAccountNumber;
     private String receiverAccountNumber;
+
 }

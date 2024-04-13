@@ -1,0 +1,25 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·ò‰ùùÿÿÿÿJ$9d7bb7b1-27c9-477a-8d37-152e98ca1ce0
+ö
+java:S6804"­Either replace the "@Value" annotation with a standard field initialization, use "${propertyName}" to inject a property or use "#{expression}" to evaluate a SpEL expression.(‰É¬Ìýÿÿÿÿ8¨¤™§í1J$727a3133-bef7-4a8f-8359-c0b639bfed13
+X	java:S125#"<This block of commented-out lines of code should be removed.(¼ž€â8ò²Æ§í1
+}
+java:S1128"[Remove this unused import 'com.banktalib.paymentservice.PaymentService.Dto.TransactionDto'.(—æÆÒþÿÿÿÿ8ô²Æ§í1
+j
+java:S1128"MRemove this unused import 'org.apache.kafka.clients.producer.ProducerConfig'.(ýä¢ó8ô²Æ§í1
+p
+java:S1128"SRemove this unused import 'org.apache.kafka.common.serialization.StringSerializer'.(Þ ¾þ8õ²Æ§í1
+y
+java:S1128"WRemove this unused import 'org.springframework.kafka.core.DefaultKafkaProducerFactory'.(Û«Ë»ûÿÿÿÿ8õ²Æ§í1
+k
+java:S1128"IRemove this unused import 'org.springframework.kafka.core.KafkaTemplate'.(˜€›‹üÿÿÿÿ8õ²Æ§í1
+h
+java:S1128"KRemove this unused import 'org.springframework.kafka.core.ProducerFactory'.(­Ùèò8õ²Æ§í1
+z
+java:S1128"XRemove this unused import 'org.springframework.kafka.support.serializer.JsonSerializer'.(šÙÚíøÿÿÿÿ8õ²Æ§í1
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8õ²Æ§í1
+L
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8ö²Æ§í1
+V
+java:S1068"4Remove this unused "bootstrapAddress" private field.(˜žï¹øÿÿÿÿ8ö²Æ§í1

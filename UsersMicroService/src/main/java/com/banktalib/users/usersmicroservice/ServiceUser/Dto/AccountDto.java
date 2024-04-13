@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -14,6 +15,7 @@ import java.io.Serializable;
  */
 @AllArgsConstructor
 @Data
+@NoArgsConstructor
 public class AccountDto implements Serializable {
     private Long idAccount;
     private String accountNumber;

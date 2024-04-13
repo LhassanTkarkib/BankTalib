@@ -6,6 +6,7 @@ import com.banktalib.paymentservice.PaymentService.Dto.TransactionDto;
 import com.banktalib.paymentservice.PaymentService.Entity.TransactionEntity;
 import com.banktalib.paymentservice.PaymentService.Enums.TransactionType;
 import com.banktalib.paymentservice.PaymentService.Mapper.TransactionMapper;
+import com.banktalib.paymentservice.PaymentService.Producer.PayementProducer;
 import com.banktalib.paymentservice.PaymentService.Repository.TransactionRepository;
 import com.banktalib.paymentservice.PaymentService.Service.ITransferService;
 import jakarta.ws.rs.NotFoundException;
@@ -26,6 +27,9 @@ public class TransferService implements ITransferService {
 
     @Autowired
     private TransactionMapper transactionMapper;
+
+    @Autowired
+    private PayementProducer payementProducer;
 
     @Override
     @Transactional
@@ -61,6 +65,19 @@ public class TransferService implements ITransferService {
         transaction.setSenderAccountNumber(sourceAccount.getAccountNumber());
         transaction.setReceiverAccountNumber(targetAccount.getAccountNumber());
         TransactionDto transactiondto = transactionMapper.toDto(transactionRepository.save(transaction));
+
+
+        com.banktalib.UserClient.TransactionDto transactionDto1 = new com.banktalib.UserClient.TransactionDto();
+
+        transactionDto1.setAmount(transactiondto.getAmount());
+        transactionDto1.setSenderAccountNumber(transactiondto.getSenderAccountNumber());
+        String type = transactiondto.getTypeTransaction().toString();
+        transactionDto1.setDateTransaction(transactiondto.getDateTransaction());
+        transactionDto1.setTypeTransaction(com.banktalib.UserClient.TransactionType.valueOf(type));
+
+
+        payementProducer.sendMessage(transactionDto1);
+
         return transactiondto;
     }
 
