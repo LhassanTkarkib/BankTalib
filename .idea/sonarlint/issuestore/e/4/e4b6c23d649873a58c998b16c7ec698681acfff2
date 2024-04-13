@@ -1,0 +1,10 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğ‘ìùÿÿÿÿ8ßóÚÂí1J$dc736c9b-e3f0-4eae-8ac2-d4e07b4791e2
+¨
+java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿ8êóÚÂí1J$1704661e-3a33-414f-8cda-194d58331f57
+
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonProperty'.(ËÃ§Ï8ëóÚÂí1J$9a9418b0-1880-4b3c-ac6b-8574abd82654
+‹
+java:S1128"CRemove this unused import 'jakarta.validation.constraints.NotNull'.(Àª•ıÿÿÿÿ8ëóÚÂí1J$21961234-4d98-49e6-b288-ee1d97a4286a
+m
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8ëóÚÂí1J$51ceb856-6b79-49ad-a15b-8accfca6c82c
