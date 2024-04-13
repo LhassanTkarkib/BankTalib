@@ -48,5 +48,4 @@ public class NotificationController {
         return new ResponseEntity<>("All notifications deleted successfully", HttpStatus.OK);
     }
 
-
 }
