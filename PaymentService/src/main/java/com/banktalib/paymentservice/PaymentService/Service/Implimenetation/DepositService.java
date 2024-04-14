@@ -20,17 +20,17 @@ import java.util.Date;
 @Service
 public class DepositService implements IDepositService {
 
-    @Autowired
-    private AccountClient accountClient;
+    private final AccountClient accountClient;
+    private final TransactionRepository transactionRepository;
+    private final PayementProducer payementProducer;
+    private final TransactionMapper transactionMapper;
 
-    @Autowired
-    private TransactionRepository transactionRepository;
-
-    @Autowired
-    private PayementProducer payementProducer;
-
-    @Autowired
-    private TransactionMapper transactionMapper;
+    public DepositService(AccountClient accountClient, TransactionRepository transactionRepository, PayementProducer payementProducer, TransactionMapper transactionMapper) {
+        this.accountClient = accountClient;
+        this.transactionRepository = transactionRepository;
+        this.payementProducer = payementProducer;
+        this.transactionMapper = transactionMapper;
+    }
 
     @Override
     @Transactional

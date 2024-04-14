@@ -1,14 +1,13 @@
 
-Œ	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜ÚJ$ffc93a35-4672-4926-b962-55edee49abda
+“	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜Ú8ù—‘ñí1J$8d05ccb6-5ebf-4882-a389-68cfe2412a68
 k
-java:S54115"(Use a primitive boolean expression here.(‰Ü„8ıŞÑí1J$f01021b7-8da3-498d-a931-d19e26f02e2f
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$6e196ea4-1b64-44e4-906c-51b5253645e1
-Œ
-java:S3655R"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõJ$c5ba9177-6dad-4e44-a304-72639fe26b0d
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ëğàÑí1J$8128ba9f-a870-43ba-a4b0-08e80c0665be
-~	java:S125"<This block of commented-out lines of code should be removed.(‹¡É¾8º–áÑí1J$f61d8f44-a082-4634-98c0-64b39bdb4f4f
-Y
-java:S21193"Save and re-use this "Random".(¼İÅfJ$554dcd3b-b25a-41c0-bf0f-471c2a69b634
-
-java:S6204>"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒJ$e72caa3e-c82a-406d-b4ca-c81430118342
+java:S54113"(Use a primitive boolean expression here.(‰Ü„8û—‘ñí1J$24932572-5912-4b3f-9ba1-67d0bfaf61a7
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ô8ş—‘ñí1J$b4d3d9a8-2c32-4ee8-adb0-f20058c5e74e
+“
+java:S3655P"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõ8É…ñí1J$24194666-8bde-4dcd-a2bb-e0bf758cf2f7
+`
+java:S21191"Save and re-use this "Random".(¼İÅf8˜‘ñí1J$e66732a3-8461-4405-8d64-1362cfd554be
+•
+java:S6204<"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒ8Ÿ˜‘ñí1J$ae85787f-cb0f-46e5-ad67-621e566fa64e
+›
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8½ºœñí1J$8c79848c-5a8a-40e1-b998-f9eec17258f9

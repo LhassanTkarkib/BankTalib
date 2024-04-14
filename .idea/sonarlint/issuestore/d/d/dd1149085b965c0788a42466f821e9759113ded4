@@ -1,9 +1,9 @@
 
 •	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$5e23946e-fbf8-41e5-b08f-be5849ee4192
-Œ
-java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼ÔáJ$3afe8a46-b44b-4be3-a081-ccc9a0f432c5
 ‘
 java:S3655;"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿJ$34b46933-0969-4d1e-b32b-805e19eefa4a
+Œ
+java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼ÔáJ$3afe8a46-b44b-4be3-a081-ccc9a0f432c5
 Y
 java:S2119%"Save and re-use this "Random".(¼İÅfJ$0e847080-ff27-4526-a117-ba3f0118df95
 “

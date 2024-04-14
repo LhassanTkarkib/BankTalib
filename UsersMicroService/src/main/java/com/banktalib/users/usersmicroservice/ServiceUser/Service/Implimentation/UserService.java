@@ -21,14 +21,12 @@ public class UserService implements IUserService {
 
     private final UserRepository userRepository;
 
-    @Autowired
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
     private final UserMapper userMapper;
 
-    @Autowired
-    public UserService(UserRepository userRepository, UserMapper userMapper) {
+    public UserService(UserRepository userRepository,AccountRepository accountRepository, UserMapper userMapper) {
         this.userRepository = userRepository;
-//        this.accountRepository = accountRepository;
+        this.accountRepository = accountRepository;
         this.userMapper = userMapper;
     }
 
