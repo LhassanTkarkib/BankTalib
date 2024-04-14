@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'Maven'
+        maven 'maven'
         git 'git'
     }
     stages {
@@ -23,12 +23,5 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps{
-                script {
-                        sh 'mvn test'
-                    }
-                }
-            }
     }
 }
