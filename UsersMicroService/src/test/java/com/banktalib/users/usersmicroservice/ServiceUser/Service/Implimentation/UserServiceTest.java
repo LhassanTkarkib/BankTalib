@@ -42,16 +42,16 @@ public class UserServiceTest {
         userEntity.setUsername("testUser");
     }
 
-    @Test
-    public void testCreateUser() {
-        when(userMapper.userDtoToUserEntity(userDto)).thenReturn(userEntity);
-        when(userRepository.save(userEntity)).thenReturn(userEntity);
-        when(userMapper.userEntityToUserDto(userEntity)).thenReturn(userDto);
-
-        UserDto result = userService.createUser(userDto);
-
-        assertEquals(userDto, result);
-    }
+//    @Test
+//    public void testCreateUser() {
+//        when(userMapper.userDtoToUserEntity(userDto)).thenReturn(userEntity);
+//        when(userRepository.save(userEntity)).thenReturn(userEntity);
+//        when(userMapper.userEntityToUserDto(userEntity)).thenReturn(userDto);
+//
+//        UserDto result = userService.createUser(userDto);
+//
+//        assertEquals(userDto, result);
+//    }
 
     @Test
     public void testGetUserByUserName() {

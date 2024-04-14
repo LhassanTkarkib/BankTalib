@@ -1,14 +1,14 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$772f4807-9e6e-4d6c-a297-a2c2ef1310b2
-‘
-java:S3655;"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿJ$764b9c82-530c-4723-b683-ac49eb94749e
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$5e23946e-fbf8-41e5-b08f-be5849ee4192
 Œ
-java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼ÔáJ$e813e845-fdc0-40f2-b13c-0bd032d47c27
+java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¼ÔáJ$3afe8a46-b44b-4be3-a081-ccc9a0f432c5
+‘
+java:S3655;"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Âèı¡ıÿÿÿÿJ$34b46933-0969-4d1e-b32b-805e19eefa4a
 Y
-java:S2119%"Save and re-use this "Random".(¼İÅfJ$c9cd9746-45c3-46cf-b5fc-af6d78c35183
+java:S2119%"Save and re-use this "Random".(¼İÅfJ$0e847080-ff27-4526-a117-ba3f0118df95
 “
-java:S62047"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿJ$e4c7af73-c147-4180-a7f0-1a7b7ed2f890
+java:S62047"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(šî¬µøÿÿÿÿJ$ba711fd5-522f-4fa0-9625-d8e85cab957c
 ¡
-java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿJ$7460eddd-9c24-4e24-b21b-6a7a2ea6e09a
+java:S1128"`Remove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Entity.UserEntity'.(²ÜĞøÿÿÿÿÿJ$93059ed9-81c1-4df7-b7a3-ad7d5bbe57f0
 ¤
-java:S1128"hRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository'.(ï®ÓòJ$6adff782-809d-40eb-8dfe-9a08b98d88ab
+java:S1128"hRemove this unused import 'com.banktalib.users.usersmicroservice.ServiceUser.Repository.UserRepository'.(ï®ÓòJ$88f4ccf9-903f-48f2-8f7e-20454b048b0d

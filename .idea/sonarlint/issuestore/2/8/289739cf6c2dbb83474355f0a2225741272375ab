@@ -1,11 +1,14 @@
 
-Œ	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜ÚJ$e326aebc-6b9b-40c0-a1c7-b4716888a0f9
-d
-java:S54113"(Use a primitive boolean expression here.(‰Ü„J$d1589954-64f2-4c6a-921f-a6bd158a67c9
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$90de0a02-eee0-4df5-bc06-0224e5f36a9b
+Œ	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³®˜ÚJ$ffc93a35-4672-4926-b962-55edee49abda
+k
+java:S54115"(Use a primitive boolean expression here.(‰Ü„8ıŞÑí1J$f01021b7-8da3-498d-a931-d19e26f02e2f
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆ·ôJ$6e196ea4-1b64-44e4-906c-51b5253645e1
 Œ
-java:S3655P"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõJ$17dae7c1-7aa6-4b94-98e1-f5749ede9180
+java:S3655R"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÚŞÒõJ$c5ba9177-6dad-4e44-a304-72639fe26b0d
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ëğàÑí1J$8128ba9f-a870-43ba-a4b0-08e80c0665be
+~	java:S125"<This block of commented-out lines of code should be removed.(‹¡É¾8º–áÑí1J$f61d8f44-a082-4634-98c0-64b39bdb4f4f
 Y
-java:S21191"Save and re-use this "Random".(¼İÅfJ$15e927a9-d1c3-4132-b280-b38faf83e054
+java:S21193"Save and re-use this "Random".(¼İÅfJ$554dcd3b-b25a-41c0-bf0f-471c2a69b634
 
-java:S6204<"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒJ$e168e269-2965-47cd-80e1-6dbc99e2fb36
+java:S6204>"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌŒ¹ƒJ$e72caa3e-c82a-406d-b4ca-c81430118342
